@@ -56,11 +56,11 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(349, 175);
+            this.btnSil.Location = new System.Drawing.Point(323, 189);
             this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.Size = new System.Drawing.Size(75, 56);
             this.btnSil.TabIndex = 2;
-            this.btnSil.Text = "button1";
+            this.btnSil.Text = "Furkan Alnıak";
             this.btnSil.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
