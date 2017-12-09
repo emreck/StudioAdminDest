@@ -60,7 +60,7 @@
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(75, 56);
             this.btnSil.TabIndex = 2;
-            this.btnSil.Text = "emre catamak";
+            this.btnSil.Text = "Ali YAZMACI";
             this.btnSil.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
