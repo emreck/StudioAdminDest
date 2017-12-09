@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace StudioAdminDest
 {
     public partial class Form1 : Form
@@ -15,6 +15,16 @@ namespace StudioAdminDest
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlBaglanti bgl = new SqlBaglanti();
+            MySqlDataAdapter ad = new MySqlDataAdapter("select * from Admin", bgl.baglanti());
+            DataTable tablo = new DataTable();
+            ad.Fill(tablo);
+            dataGridView1.DataSource = tablo;
+
         }
     }
 }
