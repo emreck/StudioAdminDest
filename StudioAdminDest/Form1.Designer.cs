@@ -79,6 +79,7 @@
             this.personelKayıtToolStripMenuItem.Name = "personelKayıtToolStripMenuItem";
             this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.personelKayıtToolStripMenuItem.Text = "Personel Kayıt";
+            this.personelKayıtToolStripMenuItem.Click += new System.EventHandler(this.personelKayıtToolStripMenuItem_Click);
             // 
             // personelGörüntüleToolStripMenuItem
             // 

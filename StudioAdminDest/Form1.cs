@@ -26,5 +26,11 @@ namespace StudioAdminDest
         {
 
         }
+
+        private void personelKayıtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelKayit personelkayit = new PersonelKayit();
+            personelkayit.Show();
+        }
     }
 }
