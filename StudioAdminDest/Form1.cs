@@ -13,7 +13,7 @@ namespace StudioAdminDest
 {
     public partial class Form1 : Form
     {
-
+        public static int ajansID;
          
         public Form1()
         {
@@ -32,9 +32,22 @@ namespace StudioAdminDest
                 beklemedeList.View = View.Details;
                 MySqlConnection baglanti;
                 SqlBaglanti con = new SqlBaglanti();
-                baglanti = con.baglanti();
 
-                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat from Isler where ajansID=(select AjansNo from Kullanicilar where ID='" + Giris.kullaniciID + "') and onay='" + onay + "' ", baglanti);
+
+                baglanti = con.baglanti();
+                MySqlCommand ajansBul = new MySqlCommand("select AjansNo from Kullanicilar where ID='" + Giris.kullaniciID + "'", baglanti);
+                MySqlDataReader ajansOku = ajansBul.ExecuteReader();
+                if (ajansOku.HasRows)
+                {
+                    while (ajansOku.Read())
+                    {
+                        ajansID =Convert.ToInt32(ajansOku["AjansNo"].ToString());
+                    }
+                }
+                baglanti.Close();
+
+                baglanti.Open();
+                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat from Isler where ajansID='"+ajansID+"' and onay='" + onay + "' ", baglanti);
                 MySqlDataReader reader = find.ExecuteReader();
 
                 if (reader.HasRows)
@@ -98,12 +111,6 @@ namespace StudioAdminDest
             PersonelKayit personelkayit = new PersonelKayit();
             personelkayit.Show();
         }
-
-        private void personelKayitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PersonelKayit personelKayit = new PersonelKayit();
-            personelKayit.Show();
-
-        }
+        
     }
 }
