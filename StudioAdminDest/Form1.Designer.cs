@@ -223,6 +223,7 @@
             this.yenile.TabIndex = 4;
             this.yenile.Text = "Yenile";
             this.yenile.UseVisualStyleBackColor = true;
+            this.yenile.Click += new System.EventHandler(this.yenile_Click);
             // 
             // Form1
             // 

@@ -13,20 +13,20 @@ namespace StudioAdminDest
 {
     public partial class Form1 : Form
     {
+
+         
         public Form1()
         {
             InitializeComponent();
         }
         
-
-        private void müşteriİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listele()
         {
+            beklemedeList.Items.Clear();
+               string yetki = "admin";
+             string onay = "BEKLEMEDE";
 
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            string yetki = "admin";
             try
             {
                 beklemedeList.View = View.Details;
@@ -34,7 +34,7 @@ namespace StudioAdminDest
                 SqlBaglanti con = new SqlBaglanti();
                 baglanti = con.baglanti();
 
-                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat from Isler where ajansID=(select AjansNo from Kullanicilar where ID='" + Giris.kullaniciID + "') ", baglanti);
+                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat from Isler where ajansID=(select AjansNo from Kullanicilar where ID='" + Giris.kullaniciID + "') and onay='" + onay + "' ", baglanti);
                 MySqlDataReader reader = find.ExecuteReader();
 
                 if (reader.HasRows)
@@ -60,7 +60,7 @@ namespace StudioAdminDest
 
 
                 baglanti.Open();
-                MySqlCommand authorityFind = new MySqlCommand("select KullaniciTipi from Kullanicilar where ID='"+Giris.kullaniciID+"' and KullaniciTipi='"+yetki+"'  ", baglanti);
+                MySqlCommand authorityFind = new MySqlCommand("select KullaniciTipi from Kullanicilar where ID='" + Giris.kullaniciID + "' and KullaniciTipi='" + yetki + "'  ", baglanti);
                 MySqlDataReader authorityRead = authorityFind.ExecuteReader();
 
                 if (!authorityRead.HasRows)
@@ -68,16 +68,32 @@ namespace StudioAdminDest
                     personelislemleriToolStripMenuItem.Visible = false;
                     fiyatlandirmaIslemleriToolStripMenuItem.Visible = false;
                 }
-             
+
             }
-            catch(Exception exp)
+            catch (Exception exp)
             {
                 MessageBox.Show(exp.ToString());
             }
-            
         }
 
-        private void personelKayıtToolStripMenuItem_Click(object sender, EventArgs e)
+        private void müşteriİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listele();   
+        }
+
+       
+
+        private void yenile_Click(object sender, EventArgs e)
+        {
+            listele();
+        }
+
+        private void personelKayitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PersonelKayit personelkayit = new PersonelKayit();
             personelkayit.Show();
