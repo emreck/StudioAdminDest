@@ -21,7 +21,7 @@ namespace StudioAdminDest
 
         private void PersonelKayit_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;        
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public void alankontrol()
@@ -44,25 +44,66 @@ namespace StudioAdminDest
 
                 errorProvider1.SetError(Tel, "Bu alan boş geçilemez !");
             }
-            
+
 
         }
-      
-       
-        private void button1_Click(object sender, EventArgs e)
+        private bool kullaniciKontrol(String kullanici)
         {
-         
-          int topkazanc = 0, cekimbasikazanc=0,alacak=0;
-            string kullanicitipi = "personel";
-    
-            alankontrol();
-            
+            bool durum = false;
             MySqlConnection baglanti;
             SqlBaglanti baglan = new SqlBaglanti();
             baglanti = baglan.baglanti();
-                        MySqlCommand komut = new MySqlCommand("insert into Kullanicilar(KulAdi,Sifre,AdSoyad,Telno,YakininTelNo,Adres,KanGrubu,TopKazanc,CekimBasiKazanc,Alacaklari,KullaniciTipi,AjansNo) values('" + kulAdi.Text + "','" + Sifre.Text + "','" + AdSoyad.Text + "','" + Tel.Text + "','" + YakinTel.Text + "','" + Adres.Text + "','" + Kan.Text + "','" + topkazanc.ToString() + "','" + cekimbasikazanc.ToString() + "','" + alacak.ToString() + "','" + kullanicitipi.ToString() + "','" + kullanicitipi.ToString() + "')", baglan.baglanti());
-            komut.ExecuteNonQuery();
+            
+            MySqlCommand komut = new MySqlCommand("Select KulAdi from Kullanicilar where KulAdi='" + kullanici + "'", baglanti);
+            
+            MySqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                if (oku["KulAdi"].ToString() == kullanici)
+                {
+                    durum = true;
+                }
+            }
+
             baglanti.Close();
+
+            return durum;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int topkazanc = 0, alacak = 0;
+            string kullanicitipi = "personel";
+            string ajansid = Form1.ajansID.ToString();
+            alankontrol();
+            bool durum = kullaniciKontrol(kulAdi.Text);
+            MySqlConnection baglanti;
+            SqlBaglanti baglan = new SqlBaglanti();
+            baglanti = baglan.baglanti();
+            MySqlCommand komut = new MySqlCommand("insert into Kullanicilar(KulAdi,Sifre,AdSoyad,TelNo,YakinTelNo,Adres,KanGrubu,TopKazanc,CekimBasiKazanc,Alacaklari,KullaniciTipi,AjansNo) values('" + kulAdi.Text + "','" + Sifre.Text + "','" + AdSoyad.Text + "','" + Tel.Text + "','" + YakinTel.Text + "','" + Adres.Text + "','" + Kan.Text + "','" + topkazanc.ToString() + "','" + Kazanc.Text + "','" + alacak.ToString() + "','" + kullanicitipi.ToString() + "','" + ajansid.ToString() + "')", baglan.baglanti());
+            if (durum)
+            {
+                errorProvider1.SetError(kulAdi, "Farklı bir kullanıcı adı alınız!");
+                MessageBox.Show("Ayni kullanici adi var('" + kulAdi.Text + "' ). Kayit olamaz!");
+                kulAdi.Clear();
+                kulAdi.Focus();
+
+            }
+            else
+            {
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Başarıyla kayıt yapıldı !");
+                PersonelKayit yenile = new PersonelKayit();
+                yenile.Refresh();
+                this.Hide();
+
+            }
+            
+         
+
+           
         }
     }
 }
