@@ -111,6 +111,39 @@ namespace StudioAdminDest
             PersonelKayit personelkayit = new PersonelKayit();
             personelkayit.Show();
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string accept = "ONAYLANDI";
+            try
+            {
+                if (beklemedeList.SelectedItems.Count==1)
+                {
+                    int seciliID = Convert.ToInt32(beklemedeList.SelectedItems[0].Text);
+
+                    MySqlConnection baglanti;
+                    SqlBaglanti con = new SqlBaglanti();
+                    baglanti = con.baglanti();
+                    MySqlCommand guncelle = new MySqlCommand("update Isler set onay='" + accept + "' where ID='"+seciliID+"' ", baglanti);
+                    guncelle.ExecuteNonQuery();
+                    baglanti.Close();
+                    MessageBox.Show("Seçili randevular onaylandı!");
+                    listele();
+                }
+                else if (beklemedeList.SelectedItems.Count>1)
+                {
+                    MessageBox.Show("Birden fazla randevu seçmeyiniz");
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen randevu seçtiğinize emin olunuz");
+                }
+              
+            }
+            catch(Exception exp)
+            {
+                MessageBox.Show("HATA : DAHA SONRA TEKRAR DENEYİNİZ "+exp.ToString());
+            }
+        }
     }
 }
