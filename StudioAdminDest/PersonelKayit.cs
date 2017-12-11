@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
+
 
 namespace StudioAdminDest
 {
@@ -19,7 +22,7 @@ namespace StudioAdminDest
 
         private void PersonelKayit_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;        
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public void alankontrol()
@@ -42,14 +45,72 @@ namespace StudioAdminDest
 
                 errorProvider1.SetError(Tel, "Bu alan boş geçilemez !");
             }
-            
 
+
+        }
+        private bool kullaniciKontrol(String kullanici)
+        {
+            bool durum = false;
+      
+            MySqlConnection baglanti;
+            SqlBaglanti baglan = new SqlBaglanti();
+            baglanti = baglan.baglanti();
+            
+            MySqlCommand komut = new MySqlCommand("Select KulAdi from Kullanicilar where KulAdi='" + kullanici + "'", baglanti);
+            
+            MySqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                if (oku["KulAdi"].ToString() == kullanici)
+                {
+                    durum = true;
+                }
+            }
+
+            baglanti.Close();
+
+            return durum;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            alankontrol();
 
+            int topkazanc = 0, alacak = 0;
+            string kullanicitipi = "personel";
+            string ajansid = Form1.ajansID.ToString();
+            alankontrol();
+            bool durum = kullaniciKontrol(kulAdi.Text);
+            System.Text.UnicodeEncoding objUE = new System.Text.UnicodeEncoding();
+            byte[] bytClearString = objUE.GetBytes(Sifre.Text);
+            MD5CryptoServiceProvider objProv = new MD5CryptoServiceProvider();            
+            byte[] hash = objProv.ComputeHash(bytClearString);
+            string sifreli = Convert.ToBase64String(hash);
+            MySqlConnection baglanti;
+            SqlBaglanti baglan = new SqlBaglanti();
+            baglanti = baglan.baglanti();
+            MySqlCommand komut = new MySqlCommand("insert into Kullanicilar(KulAdi,Sifre,AdSoyad,TelNo,YakinTelNo,Adres,KanGrubu,TopKazanc,CekimBasiKazanc,Alacaklari,KullaniciTipi,AjansNo) values('" + kulAdi.Text + "','" + sifreli.ToString() + "','" + AdSoyad.Text + "','" + Tel.Text + "','" + YakinTel.Text + "','" + Adres.Text + "','" + Kan.Text + "','" + topkazanc.ToString() + "','" + Kazanc.Text + "','" + alacak.ToString() + "','" + kullanicitipi.ToString() + "','" + ajansid.ToString() + "')", baglan.baglanti());
+            if (durum)
+            {
+                errorProvider1.SetError(kulAdi, "Farklı bir kullanıcı adı alınız!");
+                MessageBox.Show("Ayni kullanici adi var('" + kulAdi.Text + "' ). Kayit olamaz!");
+                kulAdi.Clear();
+                kulAdi.Focus();
+
+            }
+            else
+            {
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Başarıyla kayıt yapıldı !");
+                PersonelKayit yenile = new PersonelKayit();
+                yenile.Refresh();
+                this.Hide();
+
+            }
+            
+         
+
+           
         }
     }
 }
