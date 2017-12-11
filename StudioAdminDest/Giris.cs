@@ -54,7 +54,7 @@ namespace StudioAdminDest
                     this.Hide();
                     Form1 defaultPage = new Form1();
                     defaultPage.Show();
-
+                 
                 }
                 else
                 {

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace StudioAdminDest
 {
@@ -45,11 +47,22 @@ namespace StudioAdminDest
             
 
         }
-
+      
+       
         private void button1_Click(object sender, EventArgs e)
         {
+         
+          int topkazanc = 0, cekimbasikazanc=0,alacak=0;
+            string kullanicitipi = "personel";
+    
             alankontrol();
-
+            
+            MySqlConnection baglanti;
+            SqlBaglanti baglan = new SqlBaglanti();
+            baglanti = baglan.baglanti();
+                        MySqlCommand komut = new MySqlCommand("insert into Kullanicilar(KulAdi,Sifre,AdSoyad,Telno,YakininTelNo,Adres,KanGrubu,TopKazanc,CekimBasiKazanc,Alacaklari,KullaniciTipi,AjansNo) values('" + kulAdi.Text + "','" + Sifre.Text + "','" + AdSoyad.Text + "','" + Tel.Text + "','" + YakinTel.Text + "','" + Adres.Text + "','" + Kan.Text + "','" + topkazanc.ToString() + "','" + cekimbasikazanc.ToString() + "','" + alacak.ToString() + "','" + kullanicitipi.ToString() + "','" + kullanicitipi.ToString() + "')", baglan.baglanti());
+            komut.ExecuteNonQuery();
+            baglanti.Close();
         }
     }
 }
