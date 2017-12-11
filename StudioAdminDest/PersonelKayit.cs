@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
 
 
 namespace StudioAdminDest
@@ -50,6 +51,7 @@ namespace StudioAdminDest
         private bool kullaniciKontrol(String kullanici)
         {
             bool durum = false;
+      
             MySqlConnection baglanti;
             SqlBaglanti baglan = new SqlBaglanti();
             baglanti = baglan.baglanti();
@@ -78,10 +80,15 @@ namespace StudioAdminDest
             string ajansid = Form1.ajansID.ToString();
             alankontrol();
             bool durum = kullaniciKontrol(kulAdi.Text);
+            System.Text.UnicodeEncoding objUE = new System.Text.UnicodeEncoding();
+            byte[] bytClearString = objUE.GetBytes(Sifre.Text);
+            MD5CryptoServiceProvider objProv = new MD5CryptoServiceProvider();            
+            byte[] hash = objProv.ComputeHash(bytClearString);
+            string sifreli = Convert.ToBase64String(hash);
             MySqlConnection baglanti;
             SqlBaglanti baglan = new SqlBaglanti();
             baglanti = baglan.baglanti();
-            MySqlCommand komut = new MySqlCommand("insert into Kullanicilar(KulAdi,Sifre,AdSoyad,TelNo,YakinTelNo,Adres,KanGrubu,TopKazanc,CekimBasiKazanc,Alacaklari,KullaniciTipi,AjansNo) values('" + kulAdi.Text + "','" + Sifre.Text + "','" + AdSoyad.Text + "','" + Tel.Text + "','" + YakinTel.Text + "','" + Adres.Text + "','" + Kan.Text + "','" + topkazanc.ToString() + "','" + Kazanc.Text + "','" + alacak.ToString() + "','" + kullanicitipi.ToString() + "','" + ajansid.ToString() + "')", baglan.baglanti());
+            MySqlCommand komut = new MySqlCommand("insert into Kullanicilar(KulAdi,Sifre,AdSoyad,TelNo,YakinTelNo,Adres,KanGrubu,TopKazanc,CekimBasiKazanc,Alacaklari,KullaniciTipi,AjansNo) values('" + kulAdi.Text + "','" + sifreli.ToString() + "','" + AdSoyad.Text + "','" + Tel.Text + "','" + YakinTel.Text + "','" + Adres.Text + "','" + Kan.Text + "','" + topkazanc.ToString() + "','" + Kazanc.Text + "','" + alacak.ToString() + "','" + kullanicitipi.ToString() + "','" + ajansid.ToString() + "')", baglan.baglanti());
             if (durum)
             {
                 errorProvider1.SetError(kulAdi, "Farklı bir kullanıcı adı alınız!");
