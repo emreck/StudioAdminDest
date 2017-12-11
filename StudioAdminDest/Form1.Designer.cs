@@ -43,13 +43,13 @@
             this.dosyaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beklemedeList = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.adsoyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.telno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.randevuTarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.randevuSaat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.telno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,7 @@
             this.personelKayitToolStripMenuItem.Name = "personelKayitToolStripMenuItem";
             this.personelKayitToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.personelKayitToolStripMenuItem.Text = "Personel Kayıt";
+            this.personelKayitToolStripMenuItem.Click += new System.EventHandler(this.personelKayitToolStripMenuItem_Click);
             // 
             // personelGoruntuleToolStripMenuItem
             // 
@@ -106,19 +107,19 @@
             // işOluşturToolStripMenuItem
             // 
             this.işOluşturToolStripMenuItem.Name = "işOluşturToolStripMenuItem";
-            this.işOluşturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.işOluşturToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.işOluşturToolStripMenuItem.Text = "İş oluştur";
             // 
             // yapılacakİşlerToolStripMenuItem
             // 
             this.yapılacakİşlerToolStripMenuItem.Name = "yapılacakİşlerToolStripMenuItem";
-            this.yapılacakİşlerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yapılacakİşlerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.yapılacakİşlerToolStripMenuItem.Text = "Yapılacak İşler";
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.bToolStripMenuItem.Text = "Biten İşler";
             // 
             // giderlerToolStripMenuItem
@@ -171,6 +172,31 @@
             this.beklemedeList.TabIndex = 1;
             this.beklemedeList.UseCompatibleStateImageBehavior = false;
             // 
+            // id
+            // 
+            this.id.Text = "ID";
+            // 
+            // adsoyad
+            // 
+            this.adsoyad.Text = "AD  - SOYAD";
+            // 
+            // telno
+            // 
+            this.telno.DisplayIndex = 4;
+            this.telno.Text = "TELEFON";
+            this.telno.Width = 120;
+            // 
+            // randevuTarih
+            // 
+            this.randevuTarih.DisplayIndex = 2;
+            this.randevuTarih.Text = "Randevu Tarih";
+            this.randevuTarih.Width = 120;
+            // 
+            // randevuSaat
+            // 
+            this.randevuSaat.DisplayIndex = 3;
+            this.randevuSaat.Text = "Randevu Saati";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(386, 280);
@@ -189,31 +215,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Web üzerinden gelen işler ";
             // 
-            // id
-            // 
-            this.id.Text = "ID";
-            // 
-            // adsoyad
-            // 
-            this.adsoyad.Text = "AD  - SOYAD";
-            // 
-            // randevuTarih
-            // 
-            this.randevuTarih.DisplayIndex = 2;
-            this.randevuTarih.Text = "Randevu Tarih";
-            this.randevuTarih.Width = 120;
-            // 
-            // randevuSaat
-            // 
-            this.randevuSaat.DisplayIndex = 3;
-            this.randevuSaat.Text = "Randevu Saati";
-            // 
-            // telno
-            // 
-            this.telno.DisplayIndex = 4;
-            this.telno.Text = "TELEFON";
-            this.telno.Width = 120;
-            // 
             // yenile
             // 
             this.yenile.Location = new System.Drawing.Point(163, 281);
@@ -222,6 +223,7 @@
             this.yenile.TabIndex = 4;
             this.yenile.Text = "Yenile";
             this.yenile.UseVisualStyleBackColor = true;
+            this.yenile.Click += new System.EventHandler(this.yenile_Click);
             // 
             // Form1
             // 
