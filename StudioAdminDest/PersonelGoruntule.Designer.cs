@@ -108,7 +108,7 @@
             // 
             // cekimkazanc
             // 
-            this.cekimkazanc.Text = "Toplam Kazanç";
+            this.cekimkazanc.Text = "Çekim Başı Kazanç";
             this.cekimkazanc.Width = 99;
             // 
             // alacaklari
@@ -149,6 +149,7 @@
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
             this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
+            this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
             // arama
             // 

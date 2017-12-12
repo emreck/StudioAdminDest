@@ -12,6 +12,7 @@ namespace StudioAdminDest
 {
     public partial class PersonelGoruntule : Form
     {
+        
         public PersonelGoruntule()
         {
             InitializeComponent();
@@ -20,8 +21,12 @@ namespace StudioAdminDest
         private void PersonelGoruntule_Load(object sender, EventArgs e)
         {
             verilerigoster();
+           
+
+
+
         }
-        private void verilerigoster()// Veritabanındaki verileri listview'de gösterir.
+        public void verilerigoster()// Veritabanındaki verileri listview'de gösterir.
         {
             PersonelListe.Items.Clear(); //verilerin tekrarını gösterme !
             MySqlConnection baglanti;
@@ -128,6 +133,25 @@ namespace StudioAdminDest
                 }
                
               
+            }
+        }
+       
+ 
+        private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (PersonelListe.SelectedItems.Count > 0)
+            {
+                PersonelDuzen duzenle = new PersonelDuzen();
+
+                duzenle.kuladi = PersonelListe.SelectedItems[0].SubItems[0].Text;
+                duzenle.adSoyad = PersonelListe.SelectedItems[0].SubItems[1].Text;
+                duzenle.telefon = PersonelListe.SelectedItems[0].SubItems[2].Text;
+                duzenle.yakintelefon = PersonelListe.SelectedItems[0].SubItems[3].Text;
+                duzenle.adresi = PersonelListe.SelectedItems[0].SubItems[4].Text;
+                duzenle.kangrubu = PersonelListe.SelectedItems[0].SubItems[5].Text;
+                duzenle.cekimkazanci = PersonelListe.SelectedItems[0].SubItems[7].Text;
+                duzenle.ShowDialog();
+                verilerigoster();
             }
         }
     }
