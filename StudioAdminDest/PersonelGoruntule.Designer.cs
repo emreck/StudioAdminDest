@@ -41,11 +41,11 @@
             this.alacaklari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.kultip = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.verileriGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arama = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.verileriGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@
             this.alacaklari,
             this.kultip});
             this.PersonelListe.ContextMenuStrip = this.contextMenuStrip1;
+            this.PersonelListe.FullRowSelect = true;
             this.PersonelListe.Location = new System.Drawing.Point(12, 41);
             this.PersonelListe.Name = "PersonelListe";
             this.PersonelListe.Size = new System.Drawing.Size(870, 230);
@@ -127,18 +128,26 @@
             this.silToolStripMenuItem,
             this.düzenleToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 70);
+            // 
+            // verileriGösterToolStripMenuItem
+            // 
+            this.verileriGösterToolStripMenuItem.Name = "verileriGösterToolStripMenuItem";
+            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verileriGösterToolStripMenuItem.Text = "Verileri Göster";
+            this.verileriGösterToolStripMenuItem.Click += new System.EventHandler(this.verileriGösterToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // arama
@@ -161,13 +170,6 @@
             this.button1.Text = "Ara";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // verileriGösterToolStripMenuItem
-            // 
-            this.verileriGösterToolStripMenuItem.Name = "verileriGösterToolStripMenuItem";
-            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.verileriGösterToolStripMenuItem.Text = "Verileri Göster";
-            this.verileriGösterToolStripMenuItem.Click += new System.EventHandler(this.verileriGösterToolStripMenuItem_Click);
             // 
             // PersonelGoruntule
             // 

@@ -106,5 +106,29 @@ namespace StudioAdminDest
             verilerigoster();
             arama.Clear();
         }
+        
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            if (PersonelListe.SelectedItems.Count >0)
+            {
+                DialogResult uyari = MessageBox.Show("'" + PersonelListe.SelectedItems[0].Text + "' Kullanıcısını Silmek istediğinize Eminmisiniz ? ", "Uyarı !", MessageBoxButtons.YesNo);
+                if (uyari == DialogResult.Yes)
+                {
+                                        
+                    MySqlConnection baglanti;
+                    SqlBaglanti baglan = new SqlBaglanti();
+                    baglanti = baglan.baglanti();
+                    MySqlCommand komut = new MySqlCommand("delete from Kullanicilar where KulAdi='" + PersonelListe.SelectedItems[0].Text + "'", baglanti);
+                    komut.ExecuteNonQuery();
+                    baglanti.Close();
+                    MessageBox.Show("Personel Başarıyla Silinmiştir.");
+                    verilerigoster();
+
+                }
+               
+              
+            }
+        }
     }
 }

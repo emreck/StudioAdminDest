@@ -146,5 +146,11 @@ namespace StudioAdminDest
                 MessageBox.Show("HATA : DAHA SONRA TEKRAR DENEYİNİZ "+exp.ToString());
             }
         }
+
+        private void personelGoruntuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelGoruntule personel = new PersonelGoruntule();
+            personel.Show();
+        }
     }
 }
