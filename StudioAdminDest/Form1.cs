@@ -165,5 +165,10 @@ namespace StudioAdminDest
             IsEkle isForm = new IsEkle();
             isForm.Show();
         }
+
+        private void randevuRed_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("YAPIM AŞAMASINDA");
+        }
     }
 }

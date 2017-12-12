@@ -74,6 +74,12 @@
     <Compile Include="IsEkle.Designer.cs">
       <DependentUpon>IsEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelDuzen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelDuzen.Designer.cs">
+      <DependentUpon>PersonelDuzen.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelGoruntule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IsEkle.resx">
       <DependentUpon>IsEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelDuzen.resx">
+      <DependentUpon>PersonelDuzen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelGoruntule.resx">
       <DependentUpon>PersonelGoruntule.cs</DependentUpon>

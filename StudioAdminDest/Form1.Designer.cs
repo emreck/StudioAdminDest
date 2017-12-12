@@ -109,21 +109,21 @@
             // isOlusturToolStripMenuItem
             // 
             this.isOlusturToolStripMenuItem.Name = "isOlusturToolStripMenuItem";
-            this.isOlusturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.isOlusturToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.isOlusturToolStripMenuItem.Text = "İş oluştur";
             this.isOlusturToolStripMenuItem.Click += new System.EventHandler(this.isOlusturToolStripMenuItem_Click);
             // 
             // yapilacakIslerToolStripMenuItem
             // 
             this.yapilacakIslerToolStripMenuItem.Name = "yapilacakIslerToolStripMenuItem";
-            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.yapilacakIslerToolStripMenuItem.Text = "Yapılacak İşler";
             this.yapilacakIslerToolStripMenuItem.Click += new System.EventHandler(this.yapilacakIslerToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.bToolStripMenuItem.Text = "Biten İşler";
             // 
             // giderlerToolStripMenuItem
@@ -238,6 +238,7 @@
             this.randevuRed.TabIndex = 5;
             this.randevuRed.Text = "Randevu RED";
             this.randevuRed.UseVisualStyleBackColor = true;
+            this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
             // 
             // Form1
             // 

@@ -143,12 +143,12 @@ namespace StudioAdminDest
             {
                 PersonelDuzen duzenle = new PersonelDuzen();
 
-                duzenle.kuladi = PersonelListe.SelectedItems[0].SubItems[0].Text;
+                duzenle.kuladii = PersonelListe.SelectedItems[0].SubItems[0].Text;
                 duzenle.adSoyad = PersonelListe.SelectedItems[0].SubItems[1].Text;
                 duzenle.telefon = PersonelListe.SelectedItems[0].SubItems[2].Text;
                 duzenle.yakintelefon = PersonelListe.SelectedItems[0].SubItems[3].Text;
                 duzenle.adresi = PersonelListe.SelectedItems[0].SubItems[4].Text;
-                duzenle.kangrubu = PersonelListe.SelectedItems[0].SubItems[5].Text;
+                duzenle.kangrubuu = PersonelListe.SelectedItems[0].SubItems[5].Text;
                 duzenle.cekimkazanci = PersonelListe.SelectedItems[0].SubItems[7].Text;
                 duzenle.ShowDialog();
                 verilerigoster();
