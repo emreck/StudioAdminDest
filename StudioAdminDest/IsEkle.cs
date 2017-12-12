@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +45,7 @@ namespace StudioAdminDest
 
         private void isiEkle_Click(object sender, EventArgs e)
         {
+            string ajansAdi;
             try
             {
                 if (alanKontrol()==false)
@@ -52,7 +54,12 @@ namespace StudioAdminDest
                 }
                 else
                 {
-                    MessageBox.Show("BAŞARILI");
+                    /*
+                    SqlBaglanti con = new SqlBaglanti();
+                    MySqlConnection baglanti = con.baglanti();
+                    MySqlCommand ajansBul = new MySqlCommand("select ajansAdi from Ajanslar where ID='"+Form1.ajansID+"' ", baglanti);
+                    MySqlDataReader ajansOku = ajansBul.ExecuteReader();
+                    */
                 }
             }
             catch(NullReferenceException exp)
