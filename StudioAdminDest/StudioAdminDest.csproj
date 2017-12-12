@@ -62,6 +62,12 @@
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGoruntule.Designer.cs">
+      <DependentUpon>PersonelGoruntule.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGoruntule.resx">
+      <DependentUpon>PersonelGoruntule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelKayit.resx">
       <DependentUpon>PersonelKayit.cs</DependentUpon>

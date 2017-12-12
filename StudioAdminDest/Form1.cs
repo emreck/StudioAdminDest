@@ -112,6 +112,11 @@ namespace StudioAdminDest
             PersonelKayit personelkayit = new PersonelKayit();
             personelkayit.Show();
         }
-        
+
+        private void personelGoruntuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelGoruntule personelgoruntu = new PersonelGoruntule();
+            personelgoruntu.Show();
+        }
     }
 }

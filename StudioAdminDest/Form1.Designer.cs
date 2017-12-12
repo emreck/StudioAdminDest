@@ -92,6 +92,7 @@
             this.personelGoruntuleToolStripMenuItem.Name = "personelGoruntuleToolStripMenuItem";
             this.personelGoruntuleToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.personelGoruntuleToolStripMenuItem.Text = "Personel Görüntüle";
+            this.personelGoruntuleToolStripMenuItem.Click += new System.EventHandler(this.personelGoruntuleToolStripMenuItem_Click);
             // 
             // müsteriIslemleriToolStripMenuItem
             // 
