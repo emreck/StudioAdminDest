@@ -135,25 +135,23 @@ namespace StudioAdminDest
               
             }
         }
-       
- 
-     /*   private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (PersonelListe.SelectedItems.Count > 0)
-            {
-                PersonelDuzen duzenle = new PersonelDuzen();
+             private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+           {
+               if (PersonelListe.SelectedItems.Count > 0)
+               {
+                   PersonelDuzen duzenle = new PersonelDuzen();
 
-                duzenle.kuladii = PersonelListe.SelectedItems[0].SubItems[0].Text;
-                duzenle.adSoyad = PersonelListe.SelectedItems[0].SubItems[1].Text;
-                duzenle.telefon = PersonelListe.SelectedItems[0].SubItems[2].Text;
-                duzenle.yakintelefon = PersonelListe.SelectedItems[0].SubItems[3].Text;
-                duzenle.adresi = PersonelListe.SelectedItems[0].SubItems[4].Text;
-                duzenle.kangrubuu = PersonelListe.SelectedItems[0].SubItems[5].Text;
-                duzenle.cekimkazanci = PersonelListe.SelectedItems[0].SubItems[7].Text;
-                duzenle.ShowDialog();
-                verilerigoster();
-            }
-            
-        }*/
+                   duzenle.kuladii = PersonelListe.SelectedItems[0].SubItems[0].Text;
+                   duzenle.adSoyad = PersonelListe.SelectedItems[0].SubItems[1].Text;
+                   duzenle.telefon = PersonelListe.SelectedItems[0].SubItems[2].Text;
+                   duzenle.yakintelefon = PersonelListe.SelectedItems[0].SubItems[3].Text;
+                   duzenle.adresi = PersonelListe.SelectedItems[0].SubItems[4].Text;
+                   duzenle.kangrubuu = PersonelListe.SelectedItems[0].SubItems[5].Text;
+                   duzenle.cekimkazanci = PersonelListe.SelectedItems[0].SubItems[7].Text;
+                   duzenle.ShowDialog();
+                   verilerigoster();
+               }
+
+           }
     }
 }
