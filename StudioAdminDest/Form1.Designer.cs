@@ -34,7 +34,7 @@
             this.personelGoruntuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.müsteriIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.işOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yapılacakİşlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yapilacakIslerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiyatlandirmaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,7 +99,7 @@
             // 
             this.müsteriIslemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.işOluşturToolStripMenuItem,
-            this.yapılacakİşlerToolStripMenuItem,
+            this.yapilacakIslerToolStripMenuItem,
             this.bToolStripMenuItem});
             this.müsteriIslemleriToolStripMenuItem.Name = "müsteriIslemleriToolStripMenuItem";
             this.müsteriIslemleriToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
@@ -109,19 +109,20 @@
             // işOluşturToolStripMenuItem
             // 
             this.işOluşturToolStripMenuItem.Name = "işOluşturToolStripMenuItem";
-            this.işOluşturToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.işOluşturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.işOluşturToolStripMenuItem.Text = "İş oluştur";
             // 
-            // yapılacakİşlerToolStripMenuItem
+            // yapilacakIslerToolStripMenuItem
             // 
-            this.yapılacakİşlerToolStripMenuItem.Name = "yapılacakİşlerToolStripMenuItem";
-            this.yapılacakİşlerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.yapılacakİşlerToolStripMenuItem.Text = "Yapılacak İşler";
+            this.yapilacakIslerToolStripMenuItem.Name = "yapilacakIslerToolStripMenuItem";
+            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yapilacakIslerToolStripMenuItem.Text = "Yapılacak İşler";
+            this.yapilacakIslerToolStripMenuItem.Click += new System.EventHandler(this.yapilacakIslerToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bToolStripMenuItem.Text = "Biten İşler";
             // 
             // giderlerToolStripMenuItem
@@ -267,7 +268,7 @@
         private System.Windows.Forms.ToolStripMenuItem personelGoruntuleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem müsteriIslemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem işOluşturToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yapılacakİşlerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yapilacakIslerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giderlerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fiyatlandirmaIslemleriToolStripMenuItem;
