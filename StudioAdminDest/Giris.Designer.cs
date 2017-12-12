@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.girisGroupBox = new System.Windows.Forms.GroupBox();
-            this.kullaniciAdi = new System.Windows.Forms.TextBox();
-            this.kulLabel = new System.Windows.Forms.Label();
-            this.sifreLabel = new System.Windows.Forms.Label();
-            this.passwordText = new System.Windows.Forms.TextBox();
             this.girisYapButton = new System.Windows.Forms.Button();
+            this.passwordText = new System.Windows.Forms.TextBox();
+            this.sifreLabel = new System.Windows.Forms.Label();
+            this.kulLabel = new System.Windows.Forms.Label();
+            this.kullaniciAdi = new System.Windows.Forms.TextBox();
             this.girisGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,43 +46,10 @@
             this.girisGroupBox.Controls.Add(this.kullaniciAdi);
             this.girisGroupBox.Location = new System.Drawing.Point(37, 28);
             this.girisGroupBox.Name = "girisGroupBox";
-            this.girisGroupBox.Size = new System.Drawing.Size(261, 135);
+            this.girisGroupBox.Size = new System.Drawing.Size(258, 137);
             this.girisGroupBox.TabIndex = 0;
             this.girisGroupBox.TabStop = false;
             this.girisGroupBox.Text = "Giriş Yap";
-            // 
-            // kullaniciAdi
-            // 
-            this.kullaniciAdi.Location = new System.Drawing.Point(105, 19);
-            this.kullaniciAdi.Name = "kullaniciAdi";
-            this.kullaniciAdi.Size = new System.Drawing.Size(100, 20);
-            this.kullaniciAdi.TabIndex = 0;
-            // 
-            // kulLabel
-            // 
-            this.kulLabel.AutoSize = true;
-            this.kulLabel.Location = new System.Drawing.Point(7, 25);
-            this.kulLabel.Name = "kulLabel";
-            this.kulLabel.Size = new System.Drawing.Size(64, 13);
-            this.kulLabel.TabIndex = 1;
-            this.kulLabel.Text = "Kullanıcı Adı";
-            // 
-            // sifreLabel
-            // 
-            this.sifreLabel.AutoSize = true;
-            this.sifreLabel.Location = new System.Drawing.Point(7, 59);
-            this.sifreLabel.Name = "sifreLabel";
-            this.sifreLabel.Size = new System.Drawing.Size(28, 13);
-            this.sifreLabel.TabIndex = 2;
-            this.sifreLabel.Text = "Şifre";
-            // 
-            // passwordText
-            // 
-            this.passwordText.Location = new System.Drawing.Point(105, 52);
-            this.passwordText.Name = "passwordText";
-            this.passwordText.PasswordChar = '*';
-            this.passwordText.Size = new System.Drawing.Size(100, 20);
-            this.passwordText.TabIndex = 3;
             // 
             // girisYapButton
             // 
@@ -94,11 +61,44 @@
             this.girisYapButton.UseVisualStyleBackColor = true;
             this.girisYapButton.Click += new System.EventHandler(this.girisYapButton_Click);
             // 
+            // passwordText
+            // 
+            this.passwordText.Location = new System.Drawing.Point(105, 52);
+            this.passwordText.Name = "passwordText";
+            this.passwordText.PasswordChar = '*';
+            this.passwordText.Size = new System.Drawing.Size(100, 20);
+            this.passwordText.TabIndex = 3;
+            // 
+            // sifreLabel
+            // 
+            this.sifreLabel.AutoSize = true;
+            this.sifreLabel.Location = new System.Drawing.Point(7, 59);
+            this.sifreLabel.Name = "sifreLabel";
+            this.sifreLabel.Size = new System.Drawing.Size(28, 13);
+            this.sifreLabel.TabIndex = 2;
+            this.sifreLabel.Text = "Şifre";
+            // 
+            // kulLabel
+            // 
+            this.kulLabel.AutoSize = true;
+            this.kulLabel.Location = new System.Drawing.Point(7, 25);
+            this.kulLabel.Name = "kulLabel";
+            this.kulLabel.Size = new System.Drawing.Size(64, 13);
+            this.kulLabel.TabIndex = 1;
+            this.kulLabel.Text = "Kullanıcı Adı";
+            // 
+            // kullaniciAdi
+            // 
+            this.kullaniciAdi.Location = new System.Drawing.Point(105, 19);
+            this.kullaniciAdi.Name = "kullaniciAdi";
+            this.kullaniciAdi.Size = new System.Drawing.Size(100, 20);
+            this.kullaniciAdi.TabIndex = 0;
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 245);
+            this.ClientSize = new System.Drawing.Size(341, 199);
             this.Controls.Add(this.girisGroupBox);
             this.Name = "Giris";
             this.Text = "Giris";

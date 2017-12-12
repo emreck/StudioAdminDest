@@ -34,7 +34,7 @@
             this.personelGoruntuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.müsteriIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.işOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yapılacakİşlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yapilacakIslerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiyatlandirmaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +51,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
+            this.randevuRed = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,7 +99,7 @@
             // 
             this.müsteriIslemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.işOluşturToolStripMenuItem,
-            this.yapılacakİşlerToolStripMenuItem,
+            this.yapilacakIslerToolStripMenuItem,
             this.bToolStripMenuItem});
             this.müsteriIslemleriToolStripMenuItem.Name = "müsteriIslemleriToolStripMenuItem";
             this.müsteriIslemleriToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
@@ -108,19 +109,20 @@
             // işOluşturToolStripMenuItem
             // 
             this.işOluşturToolStripMenuItem.Name = "işOluşturToolStripMenuItem";
-            this.işOluşturToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.işOluşturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.işOluşturToolStripMenuItem.Text = "İş oluştur";
             // 
-            // yapılacakİşlerToolStripMenuItem
+            // yapilacakIslerToolStripMenuItem
             // 
-            this.yapılacakİşlerToolStripMenuItem.Name = "yapılacakİşlerToolStripMenuItem";
-            this.yapılacakİşlerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.yapılacakİşlerToolStripMenuItem.Text = "Yapılacak İşler";
+            this.yapilacakIslerToolStripMenuItem.Name = "yapilacakIslerToolStripMenuItem";
+            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yapilacakIslerToolStripMenuItem.Text = "Yapılacak İşler";
+            this.yapilacakIslerToolStripMenuItem.Click += new System.EventHandler(this.yapilacakIslerToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bToolStripMenuItem.Text = "Biten İşler";
             // 
             // giderlerToolStripMenuItem
@@ -200,11 +202,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(386, 280);
+            this.button1.Location = new System.Drawing.Point(600, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 38);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Randevu Kabul";
+            this.button1.Text = "Randevu KABUL";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -219,7 +221,7 @@
             // 
             // yenile
             // 
-            this.yenile.Location = new System.Drawing.Point(163, 281);
+            this.yenile.Location = new System.Drawing.Point(15, 280);
             this.yenile.Name = "yenile";
             this.yenile.Size = new System.Drawing.Size(121, 37);
             this.yenile.TabIndex = 4;
@@ -227,11 +229,21 @@
             this.yenile.UseVisualStyleBackColor = true;
             this.yenile.Click += new System.EventHandler(this.yenile_Click);
             // 
+            // randevuRed
+            // 
+            this.randevuRed.Location = new System.Drawing.Point(431, 280);
+            this.randevuRed.Name = "randevuRed";
+            this.randevuRed.Size = new System.Drawing.Size(105, 38);
+            this.randevuRed.TabIndex = 5;
+            this.randevuRed.Text = "Randevu RED";
+            this.randevuRed.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 330);
+            this.Controls.Add(this.randevuRed);
             this.Controls.Add(this.yenile);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -256,7 +268,7 @@
         private System.Windows.Forms.ToolStripMenuItem personelGoruntuleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem müsteriIslemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem işOluşturToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yapılacakİşlerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yapilacakIslerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giderlerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fiyatlandirmaIslemleriToolStripMenuItem;
@@ -273,6 +285,7 @@
         private System.Windows.Forms.ColumnHeader randevuSaat;
         private System.Windows.Forms.ColumnHeader telno;
         private System.Windows.Forms.Button yenile;
+        private System.Windows.Forms.Button randevuRed;
     }
 }
 

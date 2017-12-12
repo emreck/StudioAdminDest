@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security.Cryptography;
 
 namespace StudioAdminDest
 {
@@ -71,7 +70,7 @@ namespace StudioAdminDest
                     baglanti.Close();
                     MessageBox.Show("Beklemede olan randevu bulunamadı!");
                 }
-
+                
 
                 baglanti.Open();
                 MySqlCommand authorityFind = new MySqlCommand("select KullaniciTipi from Kullanicilar where ID='" + Giris.kullaniciID + "' and KullaniciTipi='" + yetki + "'  ", baglanti);
@@ -82,10 +81,12 @@ namespace StudioAdminDest
                     personelislemleriToolStripMenuItem.Visible = false;
                     fiyatlandirmaIslemleriToolStripMenuItem.Visible = false;
                 }
+                baglanti.Close();
 
             }
             catch (Exception exp)
             {
+               
                 MessageBox.Show(exp.ToString());
             }
         }
@@ -111,6 +112,11 @@ namespace StudioAdminDest
         {
             PersonelKayit personelkayit = new PersonelKayit();
             personelkayit.Show();
+        }
+        private void personelGoruntuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonelGoruntule personelGoruntule = new PersonelGoruntule();
+            personelGoruntule.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -147,10 +153,10 @@ namespace StudioAdminDest
             }
         }
 
-        private void personelGoruntuleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void yapilacakIslerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PersonelGoruntule personel = new PersonelGoruntule();
-            personel.Show();
+            bekleyenIsler yapilacakForm = new bekleyenIsler();
+            yapilacakForm.Show();
         }
     }
 }
