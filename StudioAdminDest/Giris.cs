@@ -35,7 +35,7 @@ namespace StudioAdminDest
 
         private void girisYapButton_Click(object sender, EventArgs e)
         {
-           
+            
             MySqlConnection baglanti;
             SqlBaglanti con = new SqlBaglanti();
             baglanti = con.baglanti();

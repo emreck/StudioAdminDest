@@ -137,7 +137,7 @@ namespace StudioAdminDest
         }
        
  
-        private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+     /*   private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (PersonelListe.SelectedItems.Count > 0)
             {
@@ -153,6 +153,7 @@ namespace StudioAdminDest
                 duzenle.ShowDialog();
                 verilerigoster();
             }
-        }
+            
+        }*/
     }
 }
