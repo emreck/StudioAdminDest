@@ -33,7 +33,7 @@
             this.personelKayitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelGoruntuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.müsteriIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.işOluşturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.isOlusturToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yapilacakIslerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,7 +98,7 @@
             // müsteriIslemleriToolStripMenuItem
             // 
             this.müsteriIslemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.işOluşturToolStripMenuItem,
+            this.isOlusturToolStripMenuItem,
             this.yapilacakIslerToolStripMenuItem,
             this.bToolStripMenuItem});
             this.müsteriIslemleriToolStripMenuItem.Name = "müsteriIslemleriToolStripMenuItem";
@@ -106,11 +106,12 @@
             this.müsteriIslemleriToolStripMenuItem.Text = "Müşteri İşlemleri";
             this.müsteriIslemleriToolStripMenuItem.Click += new System.EventHandler(this.müşteriİşlemleriToolStripMenuItem_Click);
             // 
-            // işOluşturToolStripMenuItem
+            // isOlusturToolStripMenuItem
             // 
-            this.işOluşturToolStripMenuItem.Name = "işOluşturToolStripMenuItem";
-            this.işOluşturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.işOluşturToolStripMenuItem.Text = "İş oluştur";
+            this.isOlusturToolStripMenuItem.Name = "isOlusturToolStripMenuItem";
+            this.isOlusturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.isOlusturToolStripMenuItem.Text = "İş oluştur";
+            this.isOlusturToolStripMenuItem.Click += new System.EventHandler(this.isOlusturToolStripMenuItem_Click);
             // 
             // yapilacakIslerToolStripMenuItem
             // 
@@ -267,7 +268,7 @@
         private System.Windows.Forms.ToolStripMenuItem personelKayitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelGoruntuleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem müsteriIslemleriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem işOluşturToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem isOlusturToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yapilacakIslerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giderlerToolStripMenuItem;

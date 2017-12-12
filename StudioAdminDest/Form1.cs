@@ -23,7 +23,7 @@ namespace StudioAdminDest
         private void listele()
         {
             beklemedeList.Items.Clear();
-               string yetki = "admin";
+             string yetki = "admin";
              string onay = "BEKLEMEDE";
 
 
@@ -43,8 +43,9 @@ namespace StudioAdminDest
                     {
                         ajansID =Convert.ToInt32(ajansOku["AjansNo"].ToString());
                     }
-                }
                 baglanti.Close();
+
+                }
 
                 baglanti.Open();
                 MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat from Isler where ajansID='"+ajansID+"' and onay='" + onay + "' ", baglanti);
@@ -157,6 +158,12 @@ namespace StudioAdminDest
         {
             bekleyenIsler yapilacakForm = new bekleyenIsler();
             yapilacakForm.Show();
+        }
+
+        private void isOlusturToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IsEkle isForm = new IsEkle();
+            isForm.Show();
         }
     }
 }
