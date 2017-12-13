@@ -52,6 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.randevuRed = new System.Windows.Forms.Button();
+            this.referans = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,7 +170,8 @@
             this.adsoyad,
             this.telno,
             this.randevuTarih,
-            this.randevuSaat});
+            this.randevuSaat,
+            this.referans});
             this.beklemedeList.Location = new System.Drawing.Point(12, 72);
             this.beklemedeList.Name = "beklemedeList";
             this.beklemedeList.Size = new System.Drawing.Size(707, 202);
@@ -240,6 +242,10 @@
             this.randevuRed.UseVisualStyleBackColor = true;
             this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
             // 
+            // referans
+            // 
+            this.referans.Text = "Referans";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,6 +294,7 @@
         private System.Windows.Forms.ColumnHeader telno;
         private System.Windows.Forms.Button yenile;
         private System.Windows.Forms.Button randevuRed;
+        private System.Windows.Forms.ColumnHeader referans;
     }
 }
 

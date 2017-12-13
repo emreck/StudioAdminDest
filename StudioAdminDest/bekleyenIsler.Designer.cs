@@ -35,6 +35,7 @@
             this.randevuTarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.randevuSaat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.yenile = new System.Windows.Forms.Button();
+            this.referans = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // onayliListe
@@ -44,7 +45,8 @@
             this.adsoyad,
             this.telno,
             this.randevuTarih,
-            this.randevuSaat});
+            this.randevuSaat,
+            this.referans});
             this.onayliListe.Location = new System.Drawing.Point(29, 22);
             this.onayliListe.Name = "onayliListe";
             this.onayliListe.Size = new System.Drawing.Size(550, 213);
@@ -81,6 +83,10 @@
             this.yenile.UseVisualStyleBackColor = true;
             this.yenile.Click += new System.EventHandler(this.yenile_Click);
             // 
+            // referans
+            // 
+            this.referans.Text = "Referans";
+            // 
             // bekleyenIsler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -104,5 +110,6 @@
         private System.Windows.Forms.ColumnHeader randevuTarih;
         private System.Windows.Forms.ColumnHeader randevuSaat;
         private System.Windows.Forms.Button yenile;
+        private System.Windows.Forms.ColumnHeader referans;
     }
 }

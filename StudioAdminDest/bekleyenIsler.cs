@@ -30,7 +30,7 @@ namespace StudioAdminDest
             try
             {
                 
-                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat from Isler where ajansID='" + Form1.ajansID + "' and onay='" + onay + "' ", baglanti);
+                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat,Referans from Isler where ajansID='" + Form1.ajansID + "' and onay='" + onay + "' ", baglanti);
                 MySqlDataReader reader = find.ExecuteReader();
 
                 if (reader.HasRows)
@@ -45,6 +45,7 @@ namespace StudioAdminDest
                             randevular.SubItems.Add(reader["TelNo"].ToString());
                             randevular.SubItems.Add(reader["Tarih"].ToString());
                             randevular.SubItems.Add(reader["Saat"].ToString());
+                            randevular.SubItems.Add(reader["Referans"].ToString());
                             onayliListe.Items.Add(randevular);
                         }
                        
