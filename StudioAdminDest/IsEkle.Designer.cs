@@ -32,14 +32,12 @@
             this.isiEkle = new System.Windows.Forms.Button();
             this.isAdSoyad = new System.Windows.Forms.TextBox();
             this.isTel = new System.Windows.Forms.TextBox();
-            this.isMail = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.saatLabel = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.adSoyadlbl = new System.Windows.Forms.Label();
             this.Telefon = new System.Windows.Forms.Label();
-            this.maillbl = new System.Windows.Forms.Label();
             this.tarihLabel = new System.Windows.Forms.Label();
             this.saatLbl = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -72,18 +70,11 @@
             this.isTel.Size = new System.Drawing.Size(141, 20);
             this.isTel.TabIndex = 2;
             // 
-            // isMail
-            // 
-            this.isMail.Location = new System.Drawing.Point(154, 77);
-            this.isMail.Name = "isMail";
-            this.isMail.Size = new System.Drawing.Size(141, 20);
-            this.isMail.TabIndex = 3;
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(154, 104);
+            this.dateTimePicker1.Location = new System.Drawing.Point(157, 80);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(138, 20);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // comboBox1
@@ -99,7 +90,7 @@
             "15",
             "16",
             "17"});
-            this.comboBox1.Location = new System.Drawing.Point(154, 131);
+            this.comboBox1.Location = new System.Drawing.Point(157, 115);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(41, 21);
             this.comboBox1.TabIndex = 5;
@@ -107,7 +98,7 @@
             // saatLabel
             // 
             this.saatLabel.AutoSize = true;
-            this.saatLabel.Location = new System.Drawing.Point(201, 133);
+            this.saatLabel.Location = new System.Drawing.Point(204, 117);
             this.saatLabel.Name = "saatLabel";
             this.saatLabel.Size = new System.Drawing.Size(10, 13);
             this.saatLabel.TabIndex = 6;
@@ -123,7 +114,7 @@
             "30",
             "40",
             "50"});
-            this.comboBox2.Location = new System.Drawing.Point(217, 130);
+            this.comboBox2.Location = new System.Drawing.Point(220, 114);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(37, 21);
             this.comboBox2.TabIndex = 7;
@@ -146,19 +137,10 @@
             this.Telefon.TabIndex = 9;
             this.Telefon.Text = "TELEFON";
             // 
-            // maillbl
-            // 
-            this.maillbl.AutoSize = true;
-            this.maillbl.Location = new System.Drawing.Point(44, 84);
-            this.maillbl.Name = "maillbl";
-            this.maillbl.Size = new System.Drawing.Size(32, 13);
-            this.maillbl.TabIndex = 10;
-            this.maillbl.Text = "MAİL";
-            // 
             // tarihLabel
             // 
             this.tarihLabel.AutoSize = true;
-            this.tarihLabel.Location = new System.Drawing.Point(41, 110);
+            this.tarihLabel.Location = new System.Drawing.Point(44, 86);
             this.tarihLabel.Name = "tarihLabel";
             this.tarihLabel.Size = new System.Drawing.Size(85, 13);
             this.tarihLabel.TabIndex = 11;
@@ -167,7 +149,7 @@
             // saatLbl
             // 
             this.saatLbl.AutoSize = true;
-            this.saatLbl.Location = new System.Drawing.Point(44, 133);
+            this.saatLbl.Location = new System.Drawing.Point(47, 117);
             this.saatLbl.Name = "saatLbl";
             this.saatLbl.Size = new System.Drawing.Size(35, 13);
             this.saatLbl.TabIndex = 12;
@@ -175,7 +157,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(151, 178);
+            this.textBox1.Location = new System.Drawing.Point(157, 161);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 13;
@@ -183,7 +165,7 @@
             // referansLbl
             // 
             this.referansLbl.AutoSize = true;
-            this.referansLbl.Location = new System.Drawing.Point(41, 181);
+            this.referansLbl.Location = new System.Drawing.Point(47, 164);
             this.referansLbl.Name = "referansLbl";
             this.referansLbl.Size = new System.Drawing.Size(65, 13);
             this.referansLbl.TabIndex = 14;
@@ -202,14 +184,12 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.saatLbl);
             this.Controls.Add(this.tarihLabel);
-            this.Controls.Add(this.maillbl);
             this.Controls.Add(this.Telefon);
             this.Controls.Add(this.adSoyadlbl);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.saatLabel);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.isMail);
             this.Controls.Add(this.isTel);
             this.Controls.Add(this.isAdSoyad);
             this.Controls.Add(this.isiEkle);
@@ -227,14 +207,12 @@
         private System.Windows.Forms.Button isiEkle;
         private System.Windows.Forms.TextBox isAdSoyad;
         private System.Windows.Forms.TextBox isTel;
-        private System.Windows.Forms.TextBox isMail;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label saatLabel;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label adSoyadlbl;
         private System.Windows.Forms.Label Telefon;
-        private System.Windows.Forms.Label maillbl;
         private System.Windows.Forms.Label tarihLabel;
         private System.Windows.Forms.Label saatLbl;
         private System.Windows.Forms.TextBox textBox1;

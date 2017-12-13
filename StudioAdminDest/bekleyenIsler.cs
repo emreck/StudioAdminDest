@@ -57,6 +57,10 @@ namespace StudioAdminDest
                 baglanti.Close();
                 MessageBox.Show("HATA :" + exp.ToString());
             }
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            onayliListe.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            onayliListe.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void bekleyenIsler_Load(object sender, EventArgs e)
