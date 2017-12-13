@@ -99,7 +99,11 @@ namespace StudioAdminDest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            listele();   
+            listele();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            beklemedeList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            beklemedeList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
        
@@ -168,7 +172,34 @@ namespace StudioAdminDest
 
         private void randevuRed_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("YAPIM AŞAMASINDA");
+            try
+            {
+                MySqlConnection baglanti;
+                SqlBaglanti con = new SqlBaglanti();
+                baglanti = con.baglanti();
+
+                if (beklemedeList.SelectedItems.Count == 1)
+                {
+                    MySqlCommand bul = new MySqlCommand("delete from Isler where ID='" + Convert.ToInt32(beklemedeList.SelectedItems[0].Text) +"' ",baglanti);
+                    bul.ExecuteNonQuery();
+                    baglanti.Close();
+                    listele();
+                }
+                else if (beklemedeList.SelectedItems.Count>1)
+                {
+                    MessageBox.Show("Birden fazla iş veya randevu seçmeyiniz");
+                    baglanti.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Bir iş ve ya randevu seçtiğinize emin olun");
+                    baglanti.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("BEKLENMEYEN BİR HATA!");
+            }
         }
     }
 }
