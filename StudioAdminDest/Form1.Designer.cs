@@ -41,6 +41,7 @@
             this.baskiIsleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kasaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dosyaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MesajToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beklemedeList = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,11 +49,11 @@
             this.telno = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.randevuTarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.randevuSaat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.referans = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.randevuRed = new System.Windows.Forms.Button();
-            this.referans = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,10 +67,11 @@
             this.baskiIsleriToolStripMenuItem,
             this.kasaIslemleriToolStripMenuItem,
             this.dosyaIslemleriToolStripMenuItem,
+            this.MesajToolStripMenu,
             this.cikisToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(735, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(798, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -157,6 +159,13 @@
             this.dosyaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.dosyaIslemleriToolStripMenuItem.Text = "Dosya İşlemleri";
             // 
+            // MesajToolStripMenu
+            // 
+            this.MesajToolStripMenu.Name = "MesajToolStripMenu";
+            this.MesajToolStripMenu.Size = new System.Drawing.Size(63, 20);
+            this.MesajToolStripMenu.Text = "Mesajlar";
+            this.MesajToolStripMenu.Click += new System.EventHandler(this.MesajToolStripMenu_Click);
+            // 
             // cikisToolStripMenuItem
             // 
             this.cikisToolStripMenuItem.Name = "cikisToolStripMenuItem";
@@ -174,7 +183,7 @@
             this.referans});
             this.beklemedeList.Location = new System.Drawing.Point(12, 72);
             this.beklemedeList.Name = "beklemedeList";
-            this.beklemedeList.Size = new System.Drawing.Size(707, 202);
+            this.beklemedeList.Size = new System.Drawing.Size(769, 202);
             this.beklemedeList.TabIndex = 1;
             this.beklemedeList.UseCompatibleStateImageBehavior = false;
             // 
@@ -203,9 +212,13 @@
             this.randevuSaat.DisplayIndex = 3;
             this.randevuSaat.Text = "Randevu Saati";
             // 
+            // referans
+            // 
+            this.referans.Text = "Referans";
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(600, 280);
+            this.button1.Location = new System.Drawing.Point(661, 279);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 38);
             this.button1.TabIndex = 2;
@@ -234,7 +247,7 @@
             // 
             // randevuRed
             // 
-            this.randevuRed.Location = new System.Drawing.Point(431, 280);
+            this.randevuRed.Location = new System.Drawing.Point(492, 279);
             this.randevuRed.Name = "randevuRed";
             this.randevuRed.Size = new System.Drawing.Size(105, 38);
             this.randevuRed.TabIndex = 5;
@@ -242,15 +255,11 @@
             this.randevuRed.UseVisualStyleBackColor = true;
             this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
             // 
-            // referans
-            // 
-            this.referans.Text = "Referans";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 330);
+            this.ClientSize = new System.Drawing.Size(798, 330);
             this.Controls.Add(this.randevuRed);
             this.Controls.Add(this.yenile);
             this.Controls.Add(this.label1);
@@ -295,6 +304,7 @@
         private System.Windows.Forms.Button yenile;
         private System.Windows.Forms.Button randevuRed;
         private System.Windows.Forms.ColumnHeader referans;
+        private System.Windows.Forms.ToolStripMenuItem MesajToolStripMenu;
     }
 }
 

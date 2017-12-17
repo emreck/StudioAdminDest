@@ -127,7 +127,7 @@ namespace StudioAdminDest
                     MySqlCommand komut = new MySqlCommand("delete from Kullanicilar where KulAdi='" + PersonelListe.SelectedItems[0].Text + "'", baglanti);
                     komut.ExecuteNonQuery();
                     baglanti.Close();
-                    MessageBox.Show("Personel Başarıyla Silinmiştir.");
+                    MessageBox.Show("Personel Başarıyla Silinmiştir."); 
                     verilerigoster();
 
                 }

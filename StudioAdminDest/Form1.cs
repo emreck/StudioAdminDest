@@ -202,5 +202,11 @@ namespace StudioAdminDest
                 MessageBox.Show("BEKLENMEYEN BİR HATA!");
             }
         }
+
+        private void MesajToolStripMenu_Click(object sender, EventArgs e)
+        {
+            Mesaj mesajlar = new Mesaj();
+            mesajlar.Show();
+        }
     }
 }
