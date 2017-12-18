@@ -80,6 +80,12 @@
     <Compile Include="Mesaj.Designer.cs">
       <DependentUpon>Mesaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notlar.Designer.cs">
+      <DependentUpon>Notlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonelDuzen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mesaj.resx">
       <DependentUpon>Mesaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notlar.resx">
+      <DependentUpon>Notlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelDuzen.resx">
       <DependentUpon>PersonelDuzen.cs</DependentUpon>

@@ -208,5 +208,11 @@ namespace StudioAdminDest
             Mesaj mesajlar = new Mesaj();
             mesajlar.Show();
         }
+
+        private void notlarMenuTool_Click(object sender, EventArgs e)
+        {
+            Notlar not = new Notlar();
+            not.Show();
+        }
     }
 }

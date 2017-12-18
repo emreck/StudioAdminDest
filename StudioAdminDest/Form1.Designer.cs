@@ -54,6 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.randevuRed = new System.Windows.Forms.Button();
+            this.notlarMenuTool = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,10 +69,11 @@
             this.kasaIslemleriToolStripMenuItem,
             this.dosyaIslemleriToolStripMenuItem,
             this.MesajToolStripMenu,
+            this.notlarMenuTool,
             this.cikisToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(798, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(859, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -183,7 +185,7 @@
             this.referans});
             this.beklemedeList.Location = new System.Drawing.Point(12, 72);
             this.beklemedeList.Name = "beklemedeList";
-            this.beklemedeList.Size = new System.Drawing.Size(769, 202);
+            this.beklemedeList.Size = new System.Drawing.Size(835, 202);
             this.beklemedeList.TabIndex = 1;
             this.beklemedeList.UseCompatibleStateImageBehavior = false;
             // 
@@ -218,7 +220,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(661, 279);
+            this.button1.Location = new System.Drawing.Point(728, 280);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(119, 38);
             this.button1.TabIndex = 2;
@@ -247,7 +249,7 @@
             // 
             // randevuRed
             // 
-            this.randevuRed.Location = new System.Drawing.Point(492, 279);
+            this.randevuRed.Location = new System.Drawing.Point(559, 280);
             this.randevuRed.Name = "randevuRed";
             this.randevuRed.Size = new System.Drawing.Size(105, 38);
             this.randevuRed.TabIndex = 5;
@@ -255,11 +257,18 @@
             this.randevuRed.UseVisualStyleBackColor = true;
             this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
             // 
+            // notlarMenuTool
+            // 
+            this.notlarMenuTool.Name = "notlarMenuTool";
+            this.notlarMenuTool.Size = new System.Drawing.Size(52, 20);
+            this.notlarMenuTool.Text = "Notlar";
+            this.notlarMenuTool.Click += new System.EventHandler(this.notlarMenuTool_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 330);
+            this.ClientSize = new System.Drawing.Size(859, 330);
             this.Controls.Add(this.randevuRed);
             this.Controls.Add(this.yenile);
             this.Controls.Add(this.label1);
@@ -305,6 +314,7 @@
         private System.Windows.Forms.Button randevuRed;
         private System.Windows.Forms.ColumnHeader referans;
         private System.Windows.Forms.ToolStripMenuItem MesajToolStripMenu;
+        private System.Windows.Forms.ToolStripMenuItem notlarMenuTool;
     }
 }
 
