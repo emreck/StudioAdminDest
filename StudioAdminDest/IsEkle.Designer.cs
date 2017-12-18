@@ -40,15 +40,19 @@
             this.Telefon = new System.Windows.Forms.Label();
             this.tarihLabel = new System.Windows.Forms.Label();
             this.saatLbl = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.isReferans = new System.Windows.Forms.TextBox();
             this.referansLbl = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.adresRichTextbox = new System.Windows.Forms.RichTextBox();
+            this.fiyatTextbox = new System.Windows.Forms.TextBox();
+            this.fiyatLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // isiEkle
             // 
-            this.isiEkle.Location = new System.Drawing.Point(151, 213);
+            this.isiEkle.Location = new System.Drawing.Point(146, 289);
             this.isiEkle.Name = "isiEkle";
             this.isiEkle.Size = new System.Drawing.Size(100, 62);
             this.isiEkle.TabIndex = 0;
@@ -58,21 +62,23 @@
             // 
             // isAdSoyad
             // 
-            this.isAdSoyad.Location = new System.Drawing.Point(154, 24);
+            this.isAdSoyad.Location = new System.Drawing.Point(148, 12);
             this.isAdSoyad.Name = "isAdSoyad";
             this.isAdSoyad.Size = new System.Drawing.Size(141, 20);
             this.isAdSoyad.TabIndex = 1;
             // 
             // isTel
             // 
-            this.isTel.Location = new System.Drawing.Point(154, 51);
+            this.isTel.Location = new System.Drawing.Point(148, 39);
+            this.isTel.MaxLength = 11;
             this.isTel.Name = "isTel";
             this.isTel.Size = new System.Drawing.Size(141, 20);
             this.isTel.TabIndex = 2;
+            this.isTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isTel_KeyPress);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 80);
+            this.dateTimePicker1.Location = new System.Drawing.Point(151, 72);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(138, 20);
             this.dateTimePicker1.TabIndex = 4;
@@ -90,7 +96,7 @@
             "15",
             "16",
             "17"});
-            this.comboBox1.Location = new System.Drawing.Point(157, 115);
+            this.comboBox1.Location = new System.Drawing.Point(148, 100);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(41, 21);
             this.comboBox1.TabIndex = 5;
@@ -98,7 +104,7 @@
             // saatLabel
             // 
             this.saatLabel.AutoSize = true;
-            this.saatLabel.Location = new System.Drawing.Point(204, 117);
+            this.saatLabel.Location = new System.Drawing.Point(195, 102);
             this.saatLabel.Name = "saatLabel";
             this.saatLabel.Size = new System.Drawing.Size(10, 13);
             this.saatLabel.TabIndex = 6;
@@ -114,7 +120,7 @@
             "30",
             "40",
             "50"});
-            this.comboBox2.Location = new System.Drawing.Point(220, 114);
+            this.comboBox2.Location = new System.Drawing.Point(211, 99);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(37, 21);
             this.comboBox2.TabIndex = 7;
@@ -122,7 +128,7 @@
             // adSoyadlbl
             // 
             this.adSoyadlbl.AutoSize = true;
-            this.adSoyadlbl.Location = new System.Drawing.Point(44, 31);
+            this.adSoyadlbl.Location = new System.Drawing.Point(38, 19);
             this.adSoyadlbl.Name = "adSoyadlbl";
             this.adSoyadlbl.Size = new System.Drawing.Size(62, 13);
             this.adSoyadlbl.TabIndex = 8;
@@ -131,7 +137,7 @@
             // Telefon
             // 
             this.Telefon.AutoSize = true;
-            this.Telefon.Location = new System.Drawing.Point(44, 58);
+            this.Telefon.Location = new System.Drawing.Point(38, 42);
             this.Telefon.Name = "Telefon";
             this.Telefon.Size = new System.Drawing.Size(56, 13);
             this.Telefon.TabIndex = 9;
@@ -140,7 +146,7 @@
             // tarihLabel
             // 
             this.tarihLabel.AutoSize = true;
-            this.tarihLabel.Location = new System.Drawing.Point(44, 86);
+            this.tarihLabel.Location = new System.Drawing.Point(38, 72);
             this.tarihLabel.Name = "tarihLabel";
             this.tarihLabel.Size = new System.Drawing.Size(85, 13);
             this.tarihLabel.TabIndex = 11;
@@ -149,39 +155,78 @@
             // saatLbl
             // 
             this.saatLbl.AutoSize = true;
-            this.saatLbl.Location = new System.Drawing.Point(47, 117);
+            this.saatLbl.Location = new System.Drawing.Point(38, 102);
             this.saatLbl.Name = "saatLbl";
             this.saatLbl.Size = new System.Drawing.Size(35, 13);
             this.saatLbl.TabIndex = 12;
             this.saatLbl.Text = "SAAT";
             // 
-            // textBox1
+            // isReferans
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
+            this.isReferans.Location = new System.Drawing.Point(148, 238);
+            this.isReferans.Name = "isReferans";
+            this.isReferans.Size = new System.Drawing.Size(136, 20);
+            this.isReferans.TabIndex = 13;
+            this.isReferans.Text = " ";
             // 
             // referansLbl
             // 
             this.referansLbl.AutoSize = true;
-            this.referansLbl.Location = new System.Drawing.Point(47, 164);
+            this.referansLbl.Location = new System.Drawing.Point(38, 245);
             this.referansLbl.Name = "referansLbl";
-            this.referansLbl.Size = new System.Drawing.Size(65, 13);
+            this.referansLbl.Size = new System.Drawing.Size(68, 13);
             this.referansLbl.TabIndex = 14;
-            this.referansLbl.Text = "REFERANS";
+            this.referansLbl.Text = " REFERANS";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "ADRES";
+            // 
+            // adresRichTextbox
+            // 
+            this.adresRichTextbox.Location = new System.Drawing.Point(146, 172);
+            this.adresRichTextbox.Name = "adresRichTextbox";
+            this.adresRichTextbox.Size = new System.Drawing.Size(138, 46);
+            this.adresRichTextbox.TabIndex = 16;
+            this.adresRichTextbox.Text = "";
+            // 
+            // fiyatTextbox
+            // 
+            this.fiyatTextbox.Location = new System.Drawing.Point(146, 132);
+            this.fiyatTextbox.Name = "fiyatTextbox";
+            this.fiyatTextbox.Size = new System.Drawing.Size(43, 20);
+            this.fiyatTextbox.TabIndex = 17;
+            this.fiyatTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fiyatTextbox_KeyPress);
+            // 
+            // fiyatLbl
+            // 
+            this.fiyatLbl.AutoSize = true;
+            this.fiyatLbl.Location = new System.Drawing.Point(38, 132);
+            this.fiyatLbl.Name = "fiyatLbl";
+            this.fiyatLbl.Size = new System.Drawing.Size(37, 13);
+            this.fiyatLbl.TabIndex = 18;
+            this.fiyatLbl.Text = "FİYAT";
+            // 
             // IsEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 302);
+            this.ClientSize = new System.Drawing.Size(396, 363);
+            this.Controls.Add(this.fiyatLbl);
+            this.Controls.Add(this.fiyatTextbox);
+            this.Controls.Add(this.adresRichTextbox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.referansLbl);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.isReferans);
             this.Controls.Add(this.saatLbl);
             this.Controls.Add(this.tarihLabel);
             this.Controls.Add(this.Telefon);
@@ -215,8 +260,12 @@
         private System.Windows.Forms.Label Telefon;
         private System.Windows.Forms.Label tarihLabel;
         private System.Windows.Forms.Label saatLbl;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox isReferans;
         private System.Windows.Forms.Label referansLbl;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label fiyatLbl;
+        private System.Windows.Forms.TextBox fiyatTextbox;
+        private System.Windows.Forms.RichTextBox adresRichTextbox;
+        private System.Windows.Forms.Label label1;
     }
 }

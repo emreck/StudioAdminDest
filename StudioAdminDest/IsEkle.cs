@@ -21,18 +21,22 @@ namespace StudioAdminDest
         }
         public bool alanKontrol()
         {
-            if (string.IsNullOrWhiteSpace(isAdSoyad.Text)|| string.IsNullOrEmpty(isAdSoyad.Text))
+            if (string.IsNullOrWhiteSpace(isAdSoyad.Text) || string.IsNullOrEmpty(isAdSoyad.Text))
             {
                 errorProvider1.SetError(isAdSoyad, "Lütfen adı soyadı giriniz");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(isTel.Text) || string.IsNullOrEmpty(isTel.Text))
+            else if (string.IsNullOrWhiteSpace(isTel.Text) || string.IsNullOrEmpty(isTel.Text))
             {
                 errorProvider1.SetError(isTel, "Lütfen telefon no giriniz");
                 return false;
             }
-       
-            return true;
+            else if (string.IsNullOrEmpty(fiyatTextbox.Text) || string.IsNullOrWhiteSpace(fiyatTextbox.Text))
+            {
+                errorProvider1.SetError(fiyatTextbox, "Lütfen telefon no giriniz");
+                return false;
+            }
+            else { return true; } 
         }
         private void IsEkle_Load(object sender, EventArgs e)
         {
@@ -70,7 +74,7 @@ namespace StudioAdminDest
             try
             {
                 string saat = comboBox1.SelectedItem.ToString() +":"+ comboBox2.SelectedItem.ToString();
-                MessageBox.Show(saat);
+                
 
                 if (alanKontrol()==false)
                 {
@@ -95,10 +99,19 @@ namespace StudioAdminDest
                         baglanti.Close();
 
                         baglanti.Open();
-                        MySqlCommand randEkle = new MySqlCommand("insert into Isler(AdSoyad,TelNo,ajansID,Tarih,Saat,onay,AjansAdi,CekimYeri) values('"+isAdSoyad.Text+"','"+isTel.Text+"','"+Form1.ajansID+"','"+dateTimePicker1.Text+"','"+saat+"','"+onay+"','"+ajansAdi+"','"+ajansAdi+"') ",baglanti);
+                        MySqlCommand randEkle = new MySqlCommand("insert into Isler(AdSoyad,TelNo,ajansID,Tarih,Saat,onay,AjansAdi,CekimYeri,Fiyat) values('"+isAdSoyad.Text+"','"+isTel.Text+"','"+Form1.ajansID+"','"+dateTimePicker1.Text+"','"+saat+"','"+onay+"','"+ajansAdi+"','"+adresRichTextbox+"','"+fiyatTextbox.Text+"') ",baglanti);
                         randEkle.ExecuteNonQuery();
                         baglanti.Close();
                         MessageBox.Show("İŞ BAŞARIYLA EKLENDİ");
+
+                        //-----------------finish
+
+                        isAdSoyad.Text = "";
+                        isTel.Text = "";
+                        fiyatTextbox.Text = "";
+                        adresRichTextbox.Text = "";
+                        isReferans.Text = "";
+
                     }
                 }
 
@@ -111,6 +124,40 @@ namespace StudioAdminDest
             catch
             {
                 MessageBox.Show("Doğru değerler girdiğinize emin olun");
+            }
+        }
+
+        private void fiyatTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57)
+            {
+                e.Handled = false;//eğer rakamsa  yazdır.
+            }
+
+            else if ((int)e.KeyChar == 8)
+            {
+                e.Handled = false;//eğer basılan tuş backspace ise yazdır.
+            }
+            else
+            {
+                e.Handled = true;//bunların dışındaysa hiçbirisini yazdırma
+            }
+        }
+
+        private void isTel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57)
+            {
+                e.Handled = false;//eğer rakamsa  yazdır.
+            }
+
+            else if ((int)e.KeyChar == 8)
+            {
+                e.Handled = false;//eğer basılan tuş backspace ise yazdır.
+            }
+            else
+            {
+                e.Handled = true;//bunların dışındaysa hiçbirisini yazdırma
             }
         }
     }
