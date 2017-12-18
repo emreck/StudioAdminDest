@@ -87,5 +87,30 @@ namespace StudioAdminDest
         {
             verilerigoster();
         }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (NotGoster.SelectedItems.Count > 0)
+            {
+                
+                DialogResult uyari = MessageBox.Show("'" + NotGoster.SelectedItems[0].Text + "' Kullanıcısının Notunu silmek istemisiniz ? ", "Uyarı !", MessageBoxButtons.YesNo);
+                if (uyari == DialogResult.Yes)
+                {
+
+                    MySqlConnection baglanti;
+                    SqlBaglanti baglan = new SqlBaglanti();
+                    baglanti = baglan.baglanti();
+                    MySqlCommand komut = new MySqlCommand("delete from Notlar where Tarih='" + NotGoster.SelectedItems[0].SubItems[2].Text + "'", baglanti);
+                    komut.ExecuteNonQuery();
+                    baglanti.Close();
+                    verilerigoster();
+                    MessageBox.Show("Not Başarıyla Silinmiştir.");
+                    
+
+                }
+
+
+            }
+        }
     }
 }
