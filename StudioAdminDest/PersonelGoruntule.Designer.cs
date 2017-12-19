@@ -66,6 +66,7 @@
             this.PersonelListe.FullRowSelect = true;
             this.PersonelListe.Location = new System.Drawing.Point(12, 41);
             this.PersonelListe.Name = "PersonelListe";
+            this.PersonelListe.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PersonelListe.Size = new System.Drawing.Size(870, 230);
             this.PersonelListe.TabIndex = 0;
             this.PersonelListe.UseCompatibleStateImageBehavior = false;
@@ -128,26 +129,26 @@
             this.silToolStripMenuItem,
             this.düzenleToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 70);
             // 
             // verileriGösterToolStripMenuItem
             // 
             this.verileriGösterToolStripMenuItem.Name = "verileriGösterToolStripMenuItem";
-            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verileriGösterToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.verileriGösterToolStripMenuItem.Text = "Verileri Göster";
             this.verileriGösterToolStripMenuItem.Click += new System.EventHandler(this.verileriGösterToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 

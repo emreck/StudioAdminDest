@@ -39,6 +39,8 @@
             this.giderlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiyatlandirmaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baskiIsleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baskiKayitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baskiGoruntuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kasaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dosyaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MesajToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,8 +57,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.randevuRed = new System.Windows.Forms.Button();
-            this.baskiKayitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.baskiGoruntuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,6 +154,20 @@
             this.baskiIsleriToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.baskiIsleriToolStripMenuItem.Text = "Baskı İşleri";
             this.baskiIsleriToolStripMenuItem.Click += new System.EventHandler(this.baskiIsleriToolStripMenuItem_Click);
+            // 
+            // baskiKayitToolStripMenuItem
+            // 
+            this.baskiKayitToolStripMenuItem.Name = "baskiKayitToolStripMenuItem";
+            this.baskiKayitToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.baskiKayitToolStripMenuItem.Text = "Baskı Kayıt";
+            this.baskiKayitToolStripMenuItem.Click += new System.EventHandler(this.baskiKayitToolStripMenuItem_Click);
+            // 
+            // baskiGoruntuleToolStripMenuItem
+            // 
+            this.baskiGoruntuleToolStripMenuItem.Name = "baskiGoruntuleToolStripMenuItem";
+            this.baskiGoruntuleToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.baskiGoruntuleToolStripMenuItem.Text = "Baski Görüntüle";
+            this.baskiGoruntuleToolStripMenuItem.Click += new System.EventHandler(this.baskiGoruntuleToolStripMenuItem_Click);
             // 
             // kasaIslemleriToolStripMenuItem
             // 
@@ -269,19 +283,6 @@
             this.randevuRed.Text = "Randevu RED";
             this.randevuRed.UseVisualStyleBackColor = true;
             this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
-            // 
-            // baskiKayitToolStripMenuItem
-            // 
-            this.baskiKayitToolStripMenuItem.Name = "baskiKayitToolStripMenuItem";
-            this.baskiKayitToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.baskiKayitToolStripMenuItem.Text = "Baskı Kayıt";
-            this.baskiKayitToolStripMenuItem.Click += new System.EventHandler(this.baskiKayitToolStripMenuItem_Click);
-            // 
-            // baskiGoruntuleToolStripMenuItem
-            // 
-            this.baskiGoruntuleToolStripMenuItem.Name = "baskiGoruntuleToolStripMenuItem";
-            this.baskiGoruntuleToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.baskiGoruntuleToolStripMenuItem.Text = "Baski Görüntüle";
             // 
             // Form1
             // 

@@ -225,5 +225,11 @@ namespace StudioAdminDest
             Baski baski = new Baski();
             baski.Show();
         }
+
+        private void baskiGoruntuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BaskiGoruntule baskigoruntu = new BaskiGoruntule();
+            baskigoruntu.Show();
+        }
     }
 }
