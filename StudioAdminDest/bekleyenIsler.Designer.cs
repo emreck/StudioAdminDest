@@ -43,8 +43,8 @@
             this.isAtamaGroupbox = new System.Windows.Forms.GroupBox();
             this.personelAta = new System.Windows.Forms.CheckedListBox();
             this.ucretlendirme = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.dahasonraOdemeYap = new System.Windows.Forms.Button();
+            this.odemeYap = new System.Windows.Forms.Button();
             this.ucret = new System.Windows.Forms.Label();
             this.ucretKontrol = new System.Windows.Forms.TextBox();
             this.personelCb = new System.Windows.Forms.ComboBox();
@@ -109,9 +109,9 @@
             // 
             // yenile
             // 
-            this.yenile.Location = new System.Drawing.Point(636, 173);
+            this.yenile.Location = new System.Drawing.Point(636, 169);
             this.yenile.Name = "yenile";
-            this.yenile.Size = new System.Drawing.Size(89, 62);
+            this.yenile.Size = new System.Drawing.Size(89, 66);
             this.yenile.TabIndex = 1;
             this.yenile.Text = "İŞLERİ YENİLE";
             this.yenile.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             // 
             // isAtama
             // 
-            this.isAtama.Location = new System.Drawing.Point(201, 72);
+            this.isAtama.Location = new System.Drawing.Point(191, 72);
             this.isAtama.Name = "isAtama";
             this.isAtama.Size = new System.Drawing.Size(83, 39);
             this.isAtama.TabIndex = 2;
@@ -137,7 +137,7 @@
             this.isAtamaGroupbox.Size = new System.Drawing.Size(290, 134);
             this.isAtamaGroupbox.TabIndex = 3;
             this.isAtamaGroupbox.TabStop = false;
-            this.isAtamaGroupbox.Text = "İŞ ATAMA";
+            this.isAtamaGroupbox.Text = " PERSONEL GÖREVLENDİR";
             // 
             // personelAta
             // 
@@ -151,8 +151,8 @@
             // ucretlendirme
             // 
             this.ucretlendirme.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ucretlendirme.Controls.Add(this.button3);
-            this.ucretlendirme.Controls.Add(this.button2);
+            this.ucretlendirme.Controls.Add(this.dahasonraOdemeYap);
+            this.ucretlendirme.Controls.Add(this.odemeYap);
             this.ucretlendirme.Controls.Add(this.ucret);
             this.ucretlendirme.Controls.Add(this.ucretKontrol);
             this.ucretlendirme.Controls.Add(this.personelCb);
@@ -164,23 +164,25 @@
             this.ucretlendirme.Text = "ÜCRETLENDİRME";
             this.ucretlendirme.Visible = false;
             // 
-            // button3
+            // dahasonraOdemeYap
             // 
-            this.button3.Location = new System.Drawing.Point(139, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 47);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "DAHA SONRA ÖDE";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dahasonraOdemeYap.Location = new System.Drawing.Point(139, 72);
+            this.dahasonraOdemeYap.Name = "dahasonraOdemeYap";
+            this.dahasonraOdemeYap.Size = new System.Drawing.Size(95, 47);
+            this.dahasonraOdemeYap.TabIndex = 4;
+            this.dahasonraOdemeYap.Text = "DAHA SONRA ÖDE";
+            this.dahasonraOdemeYap.UseVisualStyleBackColor = true;
+            this.dahasonraOdemeYap.Click += new System.EventHandler(this.dahasonraOdemeYap_Click);
             // 
-            // button2
+            // odemeYap
             // 
-            this.button2.Location = new System.Drawing.Point(18, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 39);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "ÖDEME YAP";
-            this.button2.UseVisualStyleBackColor = true;
+            this.odemeYap.Location = new System.Drawing.Point(18, 74);
+            this.odemeYap.Name = "odemeYap";
+            this.odemeYap.Size = new System.Drawing.Size(103, 39);
+            this.odemeYap.TabIndex = 3;
+            this.odemeYap.Text = "ÖDEME YAP";
+            this.odemeYap.UseVisualStyleBackColor = true;
+            this.odemeYap.Click += new System.EventHandler(this.odemeYap_Click);
             // 
             // ucret
             // 
@@ -254,8 +256,8 @@
         private System.Windows.Forms.ColumnHeader teslimDurumu;
         private System.Windows.Forms.ColumnHeader isiYapanlar;
         private System.Windows.Forms.CheckedListBox personelAta;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button dahasonraOdemeYap;
+        private System.Windows.Forms.Button odemeYap;
         private System.Windows.Forms.Label ucret;
         private System.Windows.Forms.TextBox ucretKontrol;
         private System.Windows.Forms.ComboBox personelCb;

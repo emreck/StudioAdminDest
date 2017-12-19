@@ -121,14 +121,46 @@ namespace StudioAdminDest
         {
             try
             {
-                int i = 0;
-                ucretlendirme.Visible = true;
-                foreach (var item in personelAta.CheckedItems)
+                if (onayliListe.SelectedItems.Count==1)
                 {
+                    int i = 0;
+                    ucretlendirme.Visible = true;
+                    foreach (var item in personelAta.CheckedItems)
+                    {
+                        eleman += item;
+                        i++;
+                        personelCb.Items.Add(personelAta.CheckedItems[i].ToString());
+                    }
+                    SqlBaglanti con = new SqlBaglanti();
+                    MySqlConnection baglanti = con.baglanti();
+                    MySqlCommand guncelle = new MySqlCommand("update Isler set IsiYapanlar='"+eleman+"' where ID='"+onayliListe.SelectedItems[0].Text+"' ", baglanti);
+                    guncelle.ExecuteNonQuery();
+                    baglanti.Close();
 
+                    onayliListele();
+
+                    for (int s=0; s<personelAta.Items.Count; i++)
+                    {
+                        personelAta.SetItemChecked(i, false);
+                    }
                 }
+
+                else if(onayliListe.SelectedItems.Count >= 1)
+                {
+                    MessageBox.Show("Lütfen birden fazla iş seçmeyiniz");
+                }
+
+                else
+                {
+                    MessageBox.Show("Hata ! Herhangi bir iş seçtiğinize emin olun.");
+                }
+
             }
-            catch(Exception exp)
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Lütfen değerleri boş bırakmayınız");
+            }
+            catch (Exception exp)
             {
                 MessageBox.Show(exp.ToString());
             }
@@ -149,6 +181,92 @@ namespace StudioAdminDest
             else
             {
                 e.Handled = true;//bunların dışındaysa hiçbirisini yazdırma
+            }
+        }
+
+        private void odemeYap_Click(object sender, EventArgs e)
+        {
+            
+
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+            int ucret = Convert.ToInt32(ucretKontrol.Text);
+
+
+            try
+            {
+                if (ucret > 0)
+                {
+
+                    string adSoyad = personelCb.SelectedItem.ToString();
+                    MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set TopKazanc ='" + ucret + "' where AdSoyad like '%"+adSoyad+"%'  ", baglanti);
+                    fiyatEkle.ExecuteNonQuery();
+                    baglanti.Close();
+
+                    ucretKontrol.Text = "";
+                    MessageBox.Show("BAŞARILI");
+                }
+           
+            }
+            catch(NullReferenceException exp)
+            {
+                baglanti.Close();
+                MessageBox.Show("Herhangi bir değer seçtiğinizden emin olun!");
+            }
+            catch(MySqlException exp)
+            {
+                baglanti.Close();
+                MessageBox.Show("Hata !Sunucuya bağlanılamıyor ");
+            }
+            catch(Exception exp)
+            {
+                baglanti.Close();
+                MessageBox.Show(exp.ToString());
+            }
+        }
+
+        private void dahasonraOdemeYap_Click(object sender, EventArgs e)
+        {
+
+
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+            int ucret = Convert.ToInt32(ucretKontrol.Text);
+
+
+            try
+            {
+                if (ucret > 0)
+                {
+
+                    string adSoyad = personelCb.SelectedItem.ToString();
+                    MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set Alacaklari ='" + ucret + "' ", baglanti);
+                    fiyatEkle.ExecuteNonQuery();
+                    baglanti.Close();
+
+                    ucretKontrol.Text = "";
+                    MessageBox.Show("BAŞARILI");
+                }
+                else
+                {
+                    MessageBox.Show("Değerleri boş bırakmadığınıza emin olun!");
+                }
+
+            }
+            catch (NullReferenceException exp)
+            {
+                baglanti.Close();
+                MessageBox.Show("Değerleri boş bırakmadığınıza emin olun!");
+            }
+            catch (MySqlException exp)
+            {
+                baglanti.Close();
+                MessageBox.Show("Hata !Sunucuya bağlanılamıyor ");
+            }
+            catch (Exception exp)
+            {
+                baglanti.Close();
+                MessageBox.Show(exp.ToString());
             }
         }
     }
