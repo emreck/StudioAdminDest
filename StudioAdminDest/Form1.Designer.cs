@@ -42,6 +42,7 @@
             this.kasaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dosyaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MesajToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.notlarMenuTool = new System.Windows.Forms.ToolStripMenuItem();
             this.cikisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beklemedeList = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,7 +55,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.randevuRed = new System.Windows.Forms.Button();
-            this.notlarMenuTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.baskiKayitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baskiGoruntuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,9 +147,13 @@
             // 
             // baskiIsleriToolStripMenuItem
             // 
+            this.baskiIsleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.baskiKayitToolStripMenuItem,
+            this.baskiGoruntuleToolStripMenuItem});
             this.baskiIsleriToolStripMenuItem.Name = "baskiIsleriToolStripMenuItem";
             this.baskiIsleriToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.baskiIsleriToolStripMenuItem.Text = "Baskı İşleri";
+            this.baskiIsleriToolStripMenuItem.Click += new System.EventHandler(this.baskiIsleriToolStripMenuItem_Click);
             // 
             // kasaIslemleriToolStripMenuItem
             // 
@@ -167,6 +173,13 @@
             this.MesajToolStripMenu.Size = new System.Drawing.Size(63, 20);
             this.MesajToolStripMenu.Text = "Mesajlar";
             this.MesajToolStripMenu.Click += new System.EventHandler(this.MesajToolStripMenu_Click);
+            // 
+            // notlarMenuTool
+            // 
+            this.notlarMenuTool.Name = "notlarMenuTool";
+            this.notlarMenuTool.Size = new System.Drawing.Size(52, 20);
+            this.notlarMenuTool.Text = "Notlar";
+            this.notlarMenuTool.Click += new System.EventHandler(this.notlarMenuTool_Click);
             // 
             // cikisToolStripMenuItem
             // 
@@ -257,12 +270,18 @@
             this.randevuRed.UseVisualStyleBackColor = true;
             this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
             // 
-            // notlarMenuTool
+            // baskiKayitToolStripMenuItem
             // 
-            this.notlarMenuTool.Name = "notlarMenuTool";
-            this.notlarMenuTool.Size = new System.Drawing.Size(52, 20);
-            this.notlarMenuTool.Text = "Notlar";
-            this.notlarMenuTool.Click += new System.EventHandler(this.notlarMenuTool_Click);
+            this.baskiKayitToolStripMenuItem.Name = "baskiKayitToolStripMenuItem";
+            this.baskiKayitToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.baskiKayitToolStripMenuItem.Text = "Baskı Kayıt";
+            this.baskiKayitToolStripMenuItem.Click += new System.EventHandler(this.baskiKayitToolStripMenuItem_Click);
+            // 
+            // baskiGoruntuleToolStripMenuItem
+            // 
+            this.baskiGoruntuleToolStripMenuItem.Name = "baskiGoruntuleToolStripMenuItem";
+            this.baskiGoruntuleToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.baskiGoruntuleToolStripMenuItem.Text = "Baski Görüntüle";
             // 
             // Form1
             // 
@@ -315,6 +334,8 @@
         private System.Windows.Forms.ColumnHeader referans;
         private System.Windows.Forms.ToolStripMenuItem MesajToolStripMenu;
         private System.Windows.Forms.ToolStripMenuItem notlarMenuTool;
+        private System.Windows.Forms.ToolStripMenuItem baskiKayitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baskiGoruntuleToolStripMenuItem;
     }
 }
 

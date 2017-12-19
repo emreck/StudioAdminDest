@@ -214,5 +214,16 @@ namespace StudioAdminDest
             Notlar not = new Notlar();
             not.Show();
         }
+
+        private void baskiIsleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void baskiKayitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Baski baski = new Baski();
+            baski.Show();
+        }
     }
 }
