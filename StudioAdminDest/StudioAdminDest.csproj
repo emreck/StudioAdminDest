@@ -56,6 +56,18 @@
     <Compile Include="Baski.Designer.cs">
       <DependentUpon>Baski.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaskiDuzen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaskiDuzen.Designer.cs">
+      <DependentUpon>BaskiDuzen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaskiGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaskiGoruntule.Designer.cs">
+      <DependentUpon>BaskiGoruntule.cs</DependentUpon>
+    </Compile>
     <Compile Include="bekleyenIsler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +127,12 @@
     <Compile Include="SqlBaglanti.cs" />
     <EmbeddedResource Include="Baski.resx">
       <DependentUpon>Baski.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaskiDuzen.resx">
+      <DependentUpon>BaskiDuzen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaskiGoruntule.resx">
+      <DependentUpon>BaskiGoruntule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bekleyenIsler.resx">
       <DependentUpon>bekleyenIsler.cs</DependentUpon>

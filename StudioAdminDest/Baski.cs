@@ -96,7 +96,17 @@ namespace StudioAdminDest
                 ekle.ExecuteNonQuery();
                 baglanti.Close();
                 MessageBox.Show("Kayıt Başarılı !");
-                this.Close();
+                DialogResult uyari = MessageBox.Show("Kaydedilen Baskıyı Görüntülemek istermisiniz ?", "Uyarı !", MessageBoxButtons.YesNo);
+                if (uyari == DialogResult.Yes)
+                {
+                    BaskiGoruntule gor = new BaskiGoruntule();
+                    gor.Show();
+                    this.Close();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
         }
     }
