@@ -70,7 +70,7 @@ namespace StudioAdminDest
         {
 
             string onay = "ONAYLANDI";
-            
+            string teslim = "Teslim Edilmedi";
             try
             {
                 string saat = comboBox1.SelectedItem.ToString() +":"+ comboBox2.SelectedItem.ToString();
@@ -99,7 +99,7 @@ namespace StudioAdminDest
                         baglanti.Close();
 
                         baglanti.Open();
-                        MySqlCommand randEkle = new MySqlCommand("insert into Isler(AdSoyad,TelNo,ajansID,Tarih,Saat,onay,AjansAdi,CekimYeri,Fiyat) values('"+isAdSoyad.Text+"','"+isTel.Text+"','"+Form1.ajansID+"','"+dateTimePicker1.Text+"','"+saat+"','"+onay+"','"+ajansAdi+"','"+adresRichTextbox+"','"+fiyatTextbox.Text+"') ",baglanti);
+                        MySqlCommand randEkle = new MySqlCommand("insert into Isler(AdSoyad,TelNo,ajansID,Tarih,Saat,onay,AjansAdi,CekimYeri,Fiyat,teslimDurumu) values('"+isAdSoyad.Text+"','"+isTel.Text+"','"+Form1.ajansID+"','"+dateTimePicker1.Text+"','"+saat+"','"+onay+"','"+ajansAdi+"','"+adresRichTextbox.Text+"','"+fiyatTextbox.Text+"','"+teslim+"') ",baglanti);
                         randEkle.ExecuteNonQuery();
                         baglanti.Close();
                         MessageBox.Show("İŞ BAŞARIYLA EKLENDİ");
