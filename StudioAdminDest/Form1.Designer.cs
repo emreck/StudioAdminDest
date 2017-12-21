@@ -138,6 +138,7 @@
             this.giderlerToolStripMenuItem.Name = "giderlerToolStripMenuItem";
             this.giderlerToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.giderlerToolStripMenuItem.Text = "Giderler";
+            this.giderlerToolStripMenuItem.Click += new System.EventHandler(this.giderlerToolStripMenuItem_Click);
             // 
             // fiyatlandirmaIslemleriToolStripMenuItem
             // 

@@ -231,5 +231,16 @@ namespace StudioAdminDest
             BaskiGoruntule baskigoruntu = new BaskiGoruntule();
             baskigoruntu.Show();
         }
+
+        private void giderGirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void giderlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Giderler gider = new Giderler();
+            gider.ShowDialog();
+        }
     }
 }
