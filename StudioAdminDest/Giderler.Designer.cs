@@ -39,20 +39,20 @@
             this.gidergor = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Kayit = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.düzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yenileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.listele = new System.Windows.Forms.ListBox();
+            this.Kayit = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // giderTip
@@ -146,21 +146,49 @@
             this.columnHeader2.Text = "Gider Adı";
             this.columnHeader2.Width = 80;
             // 
-            // columnHeader3
-            // 
-            this.columnHeader3.DisplayIndex = 2;
-            this.columnHeader3.Text = "Gider Tutarı";
-            this.columnHeader3.Width = 103;
-            // 
             // columnHeader4
             // 
             this.columnHeader4.DisplayIndex = 3;
             this.columnHeader4.Text = "Harcamayı Yapan";
             this.columnHeader4.Width = 115;
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.DisplayIndex = 2;
+            this.columnHeader3.Text = "Gider Tutarı";
+            this.columnHeader3.Width = 103;
+            // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Tarih";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.silToolStripMenuItem,
+            this.düzenleToolStripMenuItem,
+            this.yenileToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            // 
+            // düzenleToolStripMenuItem
+            // 
+            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.düzenleToolStripMenuItem.Text = "Düzenle";
+            // 
+            // yenileToolStripMenuItem
+            // 
+            this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
+            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yenileToolStripMenuItem.Text = "Yenile";
             // 
             // panel1
             // 
@@ -179,6 +207,14 @@
             this.panel1.Size = new System.Drawing.Size(217, 311);
             this.panel1.TabIndex = 10;
             // 
+            // listele
+            // 
+            this.listele.FormattingEnabled = true;
+            this.listele.Location = new System.Drawing.Point(76, 152);
+            this.listele.Name = "listele";
+            this.listele.Size = new System.Drawing.Size(120, 95);
+            this.listele.TabIndex = 11;
+            // 
             // Kayit
             // 
             this.Kayit.Location = new System.Drawing.Point(76, 268);
@@ -193,41 +229,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.silToolStripMenuItem,
-            this.düzenleToolStripMenuItem,
-            this.yenileToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 70);
-            // 
-            // silToolStripMenuItem
-            // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.silToolStripMenuItem.Text = "Sil";
-            // 
-            // düzenleToolStripMenuItem
-            // 
-            this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.düzenleToolStripMenuItem.Text = "Düzenle";
-            // 
-            // yenileToolStripMenuItem
-            // 
-            this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
-            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.yenileToolStripMenuItem.Text = "Yenile";
-            // 
-            // listele
-            // 
-            this.listele.FormattingEnabled = true;
-            this.listele.Location = new System.Drawing.Point(76, 152);
-            this.listele.Name = "listele";
-            this.listele.Size = new System.Drawing.Size(120, 95);
-            this.listele.TabIndex = 11;
-            // 
             // Giderler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,10 +239,10 @@
             this.Name = "Giderler";
             this.Text = "Giderler";
             this.Load += new System.EventHandler(this.Giderler_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

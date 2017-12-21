@@ -74,7 +74,7 @@ namespace StudioAdminDest
             giderGoster();
             personelGoster();
         }
-        string eleman;
+   
         private void Kayit_Click(object sender, EventArgs e)
         {
             String Gidertipi = giderTip.Text.ToString();
@@ -95,6 +95,10 @@ namespace StudioAdminDest
                     errorProvider1.SetError(giderAdi, "Bu Alan Boş Geçilemez!");
 
             }
+           else if (listele.SelectedIndices.Count <= 0)
+            {
+                errorProvider1.SetError(listele, "Seçim yapınız !");
+            }
             else
             {
                 MySqlConnection baglanti;
@@ -111,7 +115,36 @@ namespace StudioAdminDest
                 giderTip.Text = string.Empty;
                 giderTutar.Text = string.Empty;
                 giderAdi.Text = string.Empty;
-             
+                errorProvider1.Clear();
+            }
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (gidergor.SelectedIndices.Count > 1)
+            {
+                MessageBox.Show("Toplu silme işlemi yapamazsınız!");
+            }
+            else {
+                if (gidergor.SelectedItems.Count > 0)
+                {
+                    DialogResult uyari = MessageBox.Show("'" + gidergor.SelectedItems[0].SubItems[2].Text + "' Personelinin Harcamasını silmek için eminmisiniz ? ", "Uyarı !", MessageBoxButtons.YesNo);
+                    if (uyari == DialogResult.Yes)
+                    {
+
+                        MySqlConnection baglanti;
+                        SqlBaglanti baglan = new SqlBaglanti();
+                        baglanti = baglan.baglanti();
+                        MySqlCommand komut = new MySqlCommand("delete from Gider where Tarih='" + gidergor.SelectedItems[0].SubItems[4].Text + "'", baglanti);
+                        komut.ExecuteNonQuery();
+                        baglanti.Close();
+                        MessageBox.Show("Baskı Kaydı Başarıyla Silinmiştir.");
+                        giderGoster();
+
+
+                    }
+                }
+
             }
         }
     }
