@@ -22,6 +22,7 @@ namespace StudioAdminDest
 
         private void onayliListele()
         {
+            string teslimDurumu = "Teslim Edilmedi";
             onayliListe.View = View.Details;
             onayliListe.Items.Clear();
             string onay = "ONAYLANDI";
@@ -32,7 +33,7 @@ namespace StudioAdminDest
             try
             {
                 
-                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat,Referans,CekimYeri,teslimDurumu,IsiYapanlar from Isler where ajansID='" + Form1.ajansID + "' and onay='" + onay + "'  ", baglanti);
+                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat,Referans,CekimYeri,teslimDurumu,IsiYapanlar,UcretDurumu from Isler where ajansID='" + Form1.ajansID + "' and onay='" + onay + "' and teslimDurumu='"+teslimDurumu+"'  ", baglanti);
                 MySqlDataReader reader = find.ExecuteReader();
 
                 if (reader.HasRows)
@@ -52,6 +53,7 @@ namespace StudioAdminDest
                             randevular.SubItems.Add(reader["CekimYeri"].ToString());
                             randevular.SubItems.Add(reader["teslimDurumu"].ToString());
                             randevular.SubItems.Add(reader["IsiYapanlar"].ToString());
+                            randevular.SubItems.Add(reader["UcretDurumu"].ToString());
 
                             onayliListe.Items.Add(randevular);
                         }
@@ -292,6 +294,87 @@ namespace StudioAdminDest
 
         }
 
+        public void odemeTamamla(int ID)
+        {
+            string guncelle = "ALINDI";
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+
+            MySqlCommand ucretAl = new MySqlCommand("update Isler set UcretDurumu='"+guncelle+"' where ID='"+ID+"' ",baglanti);
+            ucretAl.ExecuteNonQuery();
+
+            baglanti.Close();            
+        }
+
+        public void teslimEdildi(int ID)
+        {
+
+            string guncelle = "Teslim Edildi";
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+
+            MySqlCommand teslim = new MySqlCommand("update Isler set teslimDurumu='" + guncelle + "' where ID='" + ID + "' ", baglanti);
+            teslim.ExecuteNonQuery();
+
+            baglanti.Close();
+        }
+
+        private void ucretOnayla_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (onayliListe.SelectedItems.Count==1)
+                {
+                    odemeTamamla(Convert.ToInt32(onayliListe.SelectedItems[0].Text));
+                    onayliListele();
+                }
+                else if (onayliListe.SelectedItems.Count >= 1)
+                {
+                    MessageBox.Show("Lütfen birden fazla iş seçmeyiniz");
+                }
+                else
+                {
+                    MessageBox.Show("Bilinmeyen bir hata !");
+                }
+            }
+            catch(MySqlException mysqlexp)
+            {
+                MessageBox.Show("Sunucuya Bağlanılamıyor !");
+            }
+            catch(NullReferenceException nullexp)
+            {
+                MessageBox.Show("Değerleri doğru girdiğinize emin olun !");
+            }
+        }
+
+        private void teslimEt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (onayliListe.SelectedItems.Count == 1)
+                {
+                    teslimEdildi(Convert.ToInt32(onayliListe.SelectedItems[0].Text));
+                    onayliListele();
+                    MessageBox.Show("Başarılı !");
+                }
+                else if (onayliListe.SelectedItems.Count>1)
+                {
+                    MessageBox.Show("Birden fazla değer seçtiğinize emin olun!");
+                }
+                else
+                {
+                    MessageBox.Show("Herhangi bir değer seçtiğinize emin olun!");
+                }
+            }
+            catch(MySqlException)
+            {
+                MessageBox.Show("Sunucuya bağlanılamıyor");
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Herhangi bir değer seçtiğinize emin olun!");
+            }
+        }
     }
 
 }
