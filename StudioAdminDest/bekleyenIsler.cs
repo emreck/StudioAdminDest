@@ -13,6 +13,8 @@ namespace StudioAdminDest
 {
     public partial class bekleyenIsler : Form
     {
+        private static int oncekiTopKazanc;
+        private static int oncekiAlacak;
         public bekleyenIsler()
         {
             InitializeComponent();
@@ -123,11 +125,11 @@ namespace StudioAdminDest
             {
                 if (onayliListe.SelectedItems.Count==1)
                 {
-                    int i = 0;
+                    int i = -1;
                     ucretlendirme.Visible = true;
                     foreach (var item in personelAta.CheckedItems)
                     {
-                        eleman += item;
+                        eleman = eleman +"-"+ item.ToString();
                         i++;
                         personelCb.Items.Add(personelAta.CheckedItems[i].ToString());
                     }
@@ -138,11 +140,7 @@ namespace StudioAdminDest
                     baglanti.Close();
 
                     onayliListele();
-
-                    for (int s=0; s<personelAta.Items.Count; i++)
-                    {
-                        personelAta.SetItemChecked(i, false);
-                    }
+                    
                 }
 
                 else if(onayliListe.SelectedItems.Count >= 1)
@@ -186,7 +184,7 @@ namespace StudioAdminDest
 
         private void odemeYap_Click(object sender, EventArgs e)
         {
-            
+          
 
             SqlBaglanti con = new SqlBaglanti();
             MySqlConnection baglanti = con.baglanti();
@@ -199,7 +197,9 @@ namespace StudioAdminDest
                 {
 
                     string adSoyad = personelCb.SelectedItem.ToString();
-                    MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set TopKazanc ='" + ucret + "' where AdSoyad like '%"+adSoyad+"%'  ", baglanti);
+                    oncekiUcret(adSoyad);
+                    ucret += oncekiTopKazanc;
+                    MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set TopKazanc ='" +ucret+ "' where AdSoyad like '%"+adSoyad+"%'  ", baglanti);
                     fiyatEkle.ExecuteNonQuery();
                     baglanti.Close();
 
@@ -222,7 +222,7 @@ namespace StudioAdminDest
             {
                 baglanti.Close();
                 MessageBox.Show(exp.ToString());
-            }
+            } 
         }
 
         private void dahasonraOdemeYap_Click(object sender, EventArgs e)
@@ -240,6 +240,8 @@ namespace StudioAdminDest
                 {
 
                     string adSoyad = personelCb.SelectedItem.ToString();
+                    oncekiUcret(adSoyad);
+                    ucret += oncekiAlacak;
                     MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set Alacaklari ='" + ucret + "' ", baglanti);
                     fiyatEkle.ExecuteNonQuery();
                     baglanti.Close();
@@ -269,5 +271,27 @@ namespace StudioAdminDest
                 MessageBox.Show(exp.ToString());
             }
         }
+      
+        public void oncekiUcret(string isimsoyisim)
+        {
+            
+            
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+
+            MySqlCommand find = new MySqlCommand("select TopKazanc,Alacaklari from Kullanicilar where AdSoyad='"+isimsoyisim+"' ", baglanti);
+            MySqlDataReader ucretRead = find.ExecuteReader();
+            if (ucretRead.HasRows)
+            {
+                while (ucretRead.Read())
+                {
+                    oncekiAlacak = Convert.ToInt32(ucretRead["Alacaklari"].ToString());
+                    oncekiTopKazanc = Convert.ToInt32(ucretRead["TopKazanc"].ToString());
+                }
+            }
+
+        }
+
     }
+
 }
