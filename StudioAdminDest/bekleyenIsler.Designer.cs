@@ -48,7 +48,9 @@
             this.ucret = new System.Windows.Forms.Label();
             this.ucretKontrol = new System.Windows.Forms.TextBox();
             this.personelCb = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ucretOnayla = new System.Windows.Forms.Button();
+            this.ucretDurumu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.teslimEt = new System.Windows.Forms.Button();
             this.isAtamaGroupbox.SuspendLayout();
             this.ucretlendirme.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +66,8 @@
             this.referans,
             this.adres,
             this.teslimDurumu,
-            this.isiYapanlar});
+            this.isiYapanlar,
+            this.ucretDurumu});
             this.onayliListe.Location = new System.Drawing.Point(29, 22);
             this.onayliListe.Name = "onayliListe";
             this.onayliListe.Size = new System.Drawing.Size(601, 213);
@@ -209,27 +212,43 @@
             this.personelCb.Size = new System.Drawing.Size(216, 21);
             this.personelCb.TabIndex = 0;
             // 
-            // button1
+            // ucretOnayla
             // 
-            this.button1.Location = new System.Drawing.Point(636, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 62);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "SEÇİLİ İŞİN TESLİMİNİ ONAYLA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ucretOnayla.Location = new System.Drawing.Point(636, 22);
+            this.ucretOnayla.Name = "ucretOnayla";
+            this.ucretOnayla.Size = new System.Drawing.Size(89, 62);
+            this.ucretOnayla.TabIndex = 5;
+            this.ucretOnayla.Text = "SEÇİLİ İŞİN ÜCRET ÖDEMESİNİ TAMAMLA";
+            this.ucretOnayla.UseVisualStyleBackColor = true;
+            this.ucretOnayla.Click += new System.EventHandler(this.ucretOnayla_Click);
+            // 
+            // ucretDurumu
+            // 
+            this.ucretDurumu.Text = "ÜCRET DURUMU";
+            // 
+            // teslimEt
+            // 
+            this.teslimEt.Location = new System.Drawing.Point(636, 91);
+            this.teslimEt.Name = "teslimEt";
+            this.teslimEt.Size = new System.Drawing.Size(89, 72);
+            this.teslimEt.TabIndex = 6;
+            this.teslimEt.Text = "TESLİM ET";
+            this.teslimEt.UseVisualStyleBackColor = true;
+            this.teslimEt.Click += new System.EventHandler(this.teslimEt_Click);
             // 
             // bekleyenIsler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 416);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.teslimEt);
+            this.Controls.Add(this.ucretOnayla);
             this.Controls.Add(this.ucretlendirme);
             this.Controls.Add(this.isAtamaGroupbox);
             this.Controls.Add(this.yenile);
             this.Controls.Add(this.onayliListe);
             this.Name = "bekleyenIsler";
-            this.Text = " ";
+            this.Text = " BEKLEYEN İŞLER";
             this.Load += new System.EventHandler(this.bekleyenIsler_Load);
             this.isAtamaGroupbox.ResumeLayout(false);
             this.ucretlendirme.ResumeLayout(false);
@@ -252,7 +271,7 @@
         private System.Windows.Forms.ColumnHeader adres;
         private System.Windows.Forms.GroupBox isAtamaGroupbox;
         private System.Windows.Forms.GroupBox ucretlendirme;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ucretOnayla;
         private System.Windows.Forms.ColumnHeader teslimDurumu;
         private System.Windows.Forms.ColumnHeader isiYapanlar;
         private System.Windows.Forms.CheckedListBox personelAta;
@@ -261,5 +280,7 @@
         private System.Windows.Forms.Label ucret;
         private System.Windows.Forms.TextBox ucretKontrol;
         private System.Windows.Forms.ComboBox personelCb;
+        private System.Windows.Forms.ColumnHeader ucretDurumu;
+        private System.Windows.Forms.Button teslimEt;
     }
 }

@@ -13,6 +13,8 @@ namespace StudioAdminDest
 {
     public partial class bekleyenIsler : Form
     {
+        private static int oncekiTopKazanc;
+        private static int oncekiAlacak;
         public bekleyenIsler()
         {
             InitializeComponent();
@@ -20,6 +22,7 @@ namespace StudioAdminDest
 
         private void onayliListele()
         {
+            string teslimDurumu = "Teslim Edilmedi";
             onayliListe.View = View.Details;
             onayliListe.Items.Clear();
             string onay = "ONAYLANDI";
@@ -30,7 +33,7 @@ namespace StudioAdminDest
             try
             {
                 
-                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat,Referans,CekimYeri,teslimDurumu,IsiYapanlar from Isler where ajansID='" + Form1.ajansID + "' and onay='" + onay + "'  ", baglanti);
+                MySqlCommand find = new MySqlCommand("select ID,AdSoyad,TelNo,Tarih,Saat,Referans,CekimYeri,teslimDurumu,IsiYapanlar,UcretDurumu from Isler where ajansID='" + Form1.ajansID + "' and onay='" + onay + "' and teslimDurumu='"+teslimDurumu+"'  ", baglanti);
                 MySqlDataReader reader = find.ExecuteReader();
 
                 if (reader.HasRows)
@@ -50,6 +53,7 @@ namespace StudioAdminDest
                             randevular.SubItems.Add(reader["CekimYeri"].ToString());
                             randevular.SubItems.Add(reader["teslimDurumu"].ToString());
                             randevular.SubItems.Add(reader["IsiYapanlar"].ToString());
+                            randevular.SubItems.Add(reader["UcretDurumu"].ToString());
 
                             onayliListe.Items.Add(randevular);
                         }
@@ -123,11 +127,11 @@ namespace StudioAdminDest
             {
                 if (onayliListe.SelectedItems.Count==1)
                 {
-                    int i = 0;
+                    int i = -1;
                     ucretlendirme.Visible = true;
                     foreach (var item in personelAta.CheckedItems)
                     {
-                        eleman += item;
+                        eleman = eleman +"-"+ item.ToString();
                         i++;
                         personelCb.Items.Add(personelAta.CheckedItems[i].ToString());
                     }
@@ -138,11 +142,7 @@ namespace StudioAdminDest
                     baglanti.Close();
 
                     onayliListele();
-
-                    for (int s=0; s<personelAta.Items.Count; i++)
-                    {
-                        personelAta.SetItemChecked(i, false);
-                    }
+                    
                 }
 
                 else if(onayliListe.SelectedItems.Count >= 1)
@@ -186,7 +186,7 @@ namespace StudioAdminDest
 
         private void odemeYap_Click(object sender, EventArgs e)
         {
-            
+          
 
             SqlBaglanti con = new SqlBaglanti();
             MySqlConnection baglanti = con.baglanti();
@@ -199,7 +199,9 @@ namespace StudioAdminDest
                 {
 
                     string adSoyad = personelCb.SelectedItem.ToString();
-                    MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set TopKazanc ='" + ucret + "' where AdSoyad like '%"+adSoyad+"%'  ", baglanti);
+                    oncekiUcret(adSoyad);
+                    ucret += oncekiTopKazanc;
+                    MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set TopKazanc ='" +ucret+ "' where AdSoyad like '%"+adSoyad+"%'  ", baglanti);
                     fiyatEkle.ExecuteNonQuery();
                     baglanti.Close();
 
@@ -222,7 +224,7 @@ namespace StudioAdminDest
             {
                 baglanti.Close();
                 MessageBox.Show(exp.ToString());
-            }
+            } 
         }
 
         private void dahasonraOdemeYap_Click(object sender, EventArgs e)
@@ -240,6 +242,8 @@ namespace StudioAdminDest
                 {
 
                     string adSoyad = personelCb.SelectedItem.ToString();
+                    oncekiUcret(adSoyad);
+                    ucret += oncekiAlacak;
                     MySqlCommand fiyatEkle = new MySqlCommand("update Kullanicilar set Alacaklari ='" + ucret + "' ", baglanti);
                     fiyatEkle.ExecuteNonQuery();
                     baglanti.Close();
@@ -269,5 +273,110 @@ namespace StudioAdminDest
                 MessageBox.Show(exp.ToString());
             }
         }
+      
+        public void oncekiUcret(string isimsoyisim)
+        {
+            
+            
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+
+            MySqlCommand find = new MySqlCommand("select TopKazanc,Alacaklari from Kullanicilar where AdSoyad='"+isimsoyisim+"' ", baglanti);
+            MySqlDataReader ucretRead = find.ExecuteReader();
+            if (ucretRead.HasRows)
+            {
+                while (ucretRead.Read())
+                {
+                    oncekiAlacak = Convert.ToInt32(ucretRead["Alacaklari"].ToString());
+                    oncekiTopKazanc = Convert.ToInt32(ucretRead["TopKazanc"].ToString());
+                }
+            }
+
+        }
+
+        public void odemeTamamla(int ID)
+        {
+            string guncelle = "ALINDI";
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+
+            MySqlCommand ucretAl = new MySqlCommand("update Isler set UcretDurumu='"+guncelle+"' where ID='"+ID+"' ",baglanti);
+            ucretAl.ExecuteNonQuery();
+
+            baglanti.Close();            
+        }
+
+        public void teslimEdildi(int ID)
+        {
+            DateTime bugun = new DateTime();
+            bugun = DateTime.Now;
+            string guncelle = "Teslim Edildi";
+            string tarih = bugun.ToString();
+            SqlBaglanti con = new SqlBaglanti();
+            MySqlConnection baglanti = con.baglanti();
+
+            MySqlCommand teslim = new MySqlCommand("update Isler set teslimDurumu='" + guncelle + "' , TeslimTarihi='"+tarih+"' where ID='" + ID + "' ", baglanti);
+            teslim.ExecuteNonQuery();
+
+            baglanti.Close();
+        }
+
+        private void ucretOnayla_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (onayliListe.SelectedItems.Count==1)
+                {
+                    odemeTamamla(Convert.ToInt32(onayliListe.SelectedItems[0].Text));
+                    onayliListele();
+                }
+                else if (onayliListe.SelectedItems.Count >= 1)
+                {
+                    MessageBox.Show("Lütfen birden fazla iş seçmeyiniz");
+                }
+                else
+                {
+                    MessageBox.Show("Bilinmeyen bir hata !");
+                }
+            }
+            catch(MySqlException mysqlexp)
+            {
+                MessageBox.Show("Sunucuya Bağlanılamıyor !");
+            }
+            catch(NullReferenceException nullexp)
+            {
+                MessageBox.Show("Değerleri doğru girdiğinize emin olun !");
+            }
+        }
+
+        private void teslimEt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (onayliListe.SelectedItems.Count == 1)
+                {
+                    teslimEdildi(Convert.ToInt32(onayliListe.SelectedItems[0].Text));
+                    onayliListele();
+                    MessageBox.Show("Başarılı !");
+                }
+                else if (onayliListe.SelectedItems.Count>1)
+                {
+                    MessageBox.Show("Birden fazla değer seçtiğinize emin olun!");
+                }
+                else
+                {
+                    MessageBox.Show("Herhangi bir değer seçtiğinize emin olun!");
+                }
+            }
+            catch(MySqlException)
+            {
+                MessageBox.Show("Sunucuya bağlanılamıyor");
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Herhangi bir değer seçtiğinize emin olun!");
+            }
+        }
     }
+
 }
