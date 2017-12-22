@@ -242,5 +242,11 @@ namespace StudioAdminDest
             Giderler gider = new Giderler();
             gider.ShowDialog();
         }
+
+        private void cikisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.Exit();
+        }
     }
 }

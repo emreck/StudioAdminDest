@@ -96,6 +96,7 @@ namespace StudioAdminDest
         }
         private void GiderDuzen_Load(object sender, EventArgs e)
         {
+            label6.Text = pers.ToString();
             personel.Text = pers.ToString();
             giderTip.Text = tipi.ToString();
             giderAdi.Text = gideradi2.ToString();

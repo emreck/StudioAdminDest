@@ -201,6 +201,7 @@
             this.cikisToolStripMenuItem.Name = "cikisToolStripMenuItem";
             this.cikisToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.cikisToolStripMenuItem.Text = "Çıkış";
+            this.cikisToolStripMenuItem.Click += new System.EventHandler(this.cikisToolStripMenuItem_Click);
             // 
             // beklemedeList
             // 
