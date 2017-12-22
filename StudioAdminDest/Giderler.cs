@@ -73,6 +73,7 @@ namespace StudioAdminDest
         {
             giderGoster();
             personelGoster();
+            toplamucret();
         }
    
         private void Kayit_Click(object sender, EventArgs e)
@@ -190,6 +191,36 @@ namespace StudioAdminDest
             giderGoster();
             aramaText.Clear();
             
+        }
+        public void toplamucret()
+        {
+            MySqlConnection baglanti;
+            SqlBaglanti baglan = new SqlBaglanti();
+            baglanti = baglan.baglanti();
+            MySqlCommand komut = new MySqlCommand("Select SUM(Gider.GiderTutar) toplam from Gider where AjansID='" + Form1.ajansID + "'", baglanti);
+            MySqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                label6.Text = oku["toplam"].ToString();
+            }
+            baglanti.Close();
+        }
+
+        private void düzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (gidergor.SelectedItems.Count > 0)
+            {
+                GiderDuzen duzen = new GiderDuzen();
+                duzen.pers = gidergor.SelectedItems[0].SubItems[2].Text;
+                duzen.gideradi2 = gidergor.SelectedItems[0].SubItems[1].Text;
+                duzen.gidertutari2 = gidergor.SelectedItems[0].SubItems[3].Text;
+                duzen.tarih = gidergor.SelectedItems[0].SubItems[4].Text;
+                duzen.tipi = gidergor.SelectedItems[0].SubItems[0].Text;
+                duzen.ShowDialog();
+                giderGoster();
+                toplamucret();
+
+            }
         }
     }
 }
