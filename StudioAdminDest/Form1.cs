@@ -247,5 +247,11 @@ namespace StudioAdminDest
             bitenIsler bt = new bitenIsler();
             bt.ShowDialog();
         }
+
+        private void odemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            borcOdeme bc1 = new borcOdeme();
+            bc1.ShowDialog();
+        }
     }
 }
