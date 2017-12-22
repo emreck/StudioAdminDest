@@ -106,17 +106,8 @@ namespace StudioAdminDest
             beklemedeList.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
-        private void giderGirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void giderlerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Giderler gider = new Giderler();
-            gider.ShowDialog();
-        }
-
+       
 
         private void yenile_Click(object sender, EventArgs e)
         {
@@ -241,10 +232,15 @@ namespace StudioAdminDest
             baskigoruntu.Show();
         }
 
-        private void bToolStripMenuItem_Click(object sender, EventArgs e)
+        private void giderGirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bitenIsler bt = new bitenIsler();
-            bt.Show();
+          
+        }
+
+        private void giderlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Giderler gider = new Giderler();
+            gider.ShowDialog();
         }
     }
 }

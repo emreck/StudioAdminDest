@@ -21,6 +21,7 @@ namespace StudioAdminDest
         private void Mesaj_Load(object sender, EventArgs e)
         {
             verilerigoster();
+            mesajgoster.Items[mesajgoster.Items.Count - 1].EnsureVisible();
         }
         string adminID = "0";
         public void verilerigoster()// Veritabanındaki verileri listview'de gösterir.
@@ -81,6 +82,7 @@ namespace StudioAdminDest
                 MessageBox.Show("Mesajınız Başarıyla iletişmiştir.");
                 mesajicerik.Text = string.Empty;
                 verilerigoster();
+                mesajgoster.Items[mesajgoster.Items.Count - 1].EnsureVisible();
             }
         }
     }
