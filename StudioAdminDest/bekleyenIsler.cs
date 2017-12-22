@@ -308,12 +308,14 @@ namespace StudioAdminDest
 
         public void teslimEdildi(int ID)
         {
-
+            DateTime bugun = new DateTime();
+            bugun = DateTime.Now;
             string guncelle = "Teslim Edildi";
+            string tarih = bugun.ToString();
             SqlBaglanti con = new SqlBaglanti();
             MySqlConnection baglanti = con.baglanti();
 
-            MySqlCommand teslim = new MySqlCommand("update Isler set teslimDurumu='" + guncelle + "' where ID='" + ID + "' ", baglanti);
+            MySqlCommand teslim = new MySqlCommand("update Isler set teslimDurumu='" + guncelle + "' , TeslimTarihi='"+tarih+"' where ID='" + ID + "' ", baglanti);
             teslim.ExecuteNonQuery();
 
             baglanti.Close();

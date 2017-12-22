@@ -231,5 +231,11 @@ namespace StudioAdminDest
             BaskiGoruntule baskigoruntu = new BaskiGoruntule();
             baskigoruntu.Show();
         }
+
+        private void bToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bitenIsler bt = new bitenIsler();
+            bt.Show();
+        }
     }
 }
