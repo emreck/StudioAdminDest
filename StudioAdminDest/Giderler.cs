@@ -147,5 +147,49 @@ namespace StudioAdminDest
 
             }
         }
+        public void aramayap()
+        {
+            gidergor.Items.Clear(); //verilerin tekrarını gösterme !
+            MySqlConnection baglanti;
+            SqlBaglanti baglan = new SqlBaglanti();
+            baglanti = baglan.baglanti();
+
+            MySqlCommand komut = new MySqlCommand("select GiderTipi,GiderAdi,HarcamayiYapan,GiderTutar,Tarih,AjansID from Gider where HarcamayiYapan Like '%" +aramaText.Text + "%' and AjansID='" + Form1.ajansID.ToString() + "'", baglanti);
+            MySqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                ListViewItem ekle = new ListViewItem();
+              
+                ekle.Text = oku["GiderTipi"].ToString();
+                ekle.SubItems.Add(oku["GiderAdi"].ToString());
+                ekle.SubItems.Add(oku["HarcamayiYapan"].ToString());
+                ekle.SubItems.Add(oku["GiderTutar"].ToString());
+                ekle.SubItems.Add(oku["Tarih"].ToString());
+
+                gidergor.Items.Add(ekle);
+
+
+                // buraya kadar veritabanından okuduğu yerleri listview'de sırayla yazdı.
+            }
+            baglanti.Close();
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            gidergor.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            gidergor.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+
+        }
+        private void Arama_Click(object sender, EventArgs e)
+        {
+            aramayap();
+
+        }
+
+        private void yenileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            giderGoster();
+            aramaText.Clear();
+            
+        }
     }
 }

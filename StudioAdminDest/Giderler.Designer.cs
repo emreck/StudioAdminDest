@@ -50,9 +50,13 @@
             this.listele = new System.Windows.Forms.ListBox();
             this.Kayit = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.aramaText = new System.Windows.Forms.TextBox();
+            this.Arama = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // giderTip
@@ -129,9 +133,9 @@
             this.columnHeader5});
             this.gidergor.ContextMenuStrip = this.contextMenuStrip1;
             this.gidergor.FullRowSelect = true;
-            this.gidergor.Location = new System.Drawing.Point(235, 12);
+            this.gidergor.Location = new System.Drawing.Point(235, 46);
             this.gidergor.Name = "gidergor";
-            this.gidergor.Size = new System.Drawing.Size(542, 311);
+            this.gidergor.Size = new System.Drawing.Size(542, 277);
             this.gidergor.TabIndex = 8;
             this.gidergor.UseCompatibleStateImageBehavior = false;
             this.gidergor.View = System.Windows.Forms.View.Details;
@@ -174,14 +178,14 @@
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
             // 
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             // 
             // yenileToolStripMenuItem
@@ -189,6 +193,7 @@
             this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
             this.yenileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.yenileToolStripMenuItem.Text = "Yenile";
+            this.yenileToolStripMenuItem.Click += new System.EventHandler(this.yenileToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -229,11 +234,39 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // aramaText
+            // 
+            this.aramaText.Location = new System.Drawing.Point(65, 5);
+            this.aramaText.Name = "aramaText";
+            this.aramaText.Size = new System.Drawing.Size(103, 20);
+            this.aramaText.TabIndex = 11;
+            // 
+            // Arama
+            // 
+            this.Arama.Location = new System.Drawing.Point(3, 3);
+            this.Arama.Name = "Arama";
+            this.Arama.Size = new System.Drawing.Size(56, 23);
+            this.Arama.TabIndex = 12;
+            this.Arama.Text = "Ara";
+            this.Arama.UseVisualStyleBackColor = true;
+            this.Arama.Click += new System.EventHandler(this.Arama_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.panel2.Controls.Add(this.Arama);
+            this.panel2.Controls.Add(this.aramaText);
+            this.panel2.Location = new System.Drawing.Point(235, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(542, 28);
+            this.panel2.TabIndex = 13;
+            // 
             // Giderler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 335);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gidergor);
             this.Name = "Giderler";
@@ -243,6 +276,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +305,8 @@
         private System.Windows.Forms.ToolStripMenuItem düzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yenileToolStripMenuItem;
         private System.Windows.Forms.ListBox listele;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Arama;
+        private System.Windows.Forms.TextBox aramaText;
     }
 }
