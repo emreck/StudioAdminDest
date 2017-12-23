@@ -259,5 +259,17 @@ namespace StudioAdminDest
            
             Application.Exit();
         }
+
+        private void dosyaIslemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dosyalama dosya = new dosyalama();
+            dosya.Show();
+        }
+
+        private void fiyatlandirmaIslemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tanimlama tanim = new Tanimlama();
+            tanim.Show();
+        }
     }
 }
