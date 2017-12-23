@@ -253,5 +253,11 @@ namespace StudioAdminDest
             borcOdeme bc1 = new borcOdeme();
             bc1.ShowDialog();
         }
+
+        private void cikisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            Application.Exit();
+        }
     }
 }

@@ -42,6 +42,8 @@
             this.baskiKayitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baskiGoruntuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kasaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.işAnaliziToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dosyaIslemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MesajToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.notlarMenuTool = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +59,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.randevuRed = new System.Windows.Forms.Button();
-            this.işAnaliziToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -134,7 +134,7 @@
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
             this.bToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.bToolStripMenuItem.Text = "Biten İşler";
-            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click_1);
+            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
             // giderlerToolStripMenuItem
             // 
@@ -182,12 +182,24 @@
             this.kasaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.kasaIslemleriToolStripMenuItem.Text = "Kasa işlemleri";
             // 
+            // işAnaliziToolStripMenuItem
+            // 
+            this.işAnaliziToolStripMenuItem.Name = "işAnaliziToolStripMenuItem";
+            this.işAnaliziToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.işAnaliziToolStripMenuItem.Text = "İs Analizi";
+            // 
+            // odemeToolStripMenuItem
+            // 
+            this.odemeToolStripMenuItem.Name = "odemeToolStripMenuItem";
+            this.odemeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.odemeToolStripMenuItem.Text = "Ödeme";
+            this.odemeToolStripMenuItem.Click += new System.EventHandler(this.odemeToolStripMenuItem_Click);
+            // 
             // dosyaIslemleriToolStripMenuItem
             // 
             this.dosyaIslemleriToolStripMenuItem.Name = "dosyaIslemleriToolStripMenuItem";
             this.dosyaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.dosyaIslemleriToolStripMenuItem.Text = "Dosya İşlemleri";
-            this.dosyaIslemleriToolStripMenuItem.Click += new System.EventHandler(this.dosyaIslemleriToolStripMenuItem_Click);
             // 
             // MesajToolStripMenu
             // 
@@ -292,19 +304,6 @@
             this.randevuRed.Text = "Randevu RED";
             this.randevuRed.UseVisualStyleBackColor = true;
             this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
-            // 
-            // işAnaliziToolStripMenuItem
-            // 
-            this.işAnaliziToolStripMenuItem.Name = "işAnaliziToolStripMenuItem";
-            this.işAnaliziToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.işAnaliziToolStripMenuItem.Text = "İs Analizi";
-            // 
-            // odemeToolStripMenuItem
-            // 
-            this.odemeToolStripMenuItem.Name = "odemeToolStripMenuItem";
-            this.odemeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.odemeToolStripMenuItem.Text = "Ödeme";
-            this.odemeToolStripMenuItem.Click += new System.EventHandler(this.odemeToolStripMenuItem_Click);
             // 
             // Form1
             // 
