@@ -116,23 +116,23 @@
             // isOlusturToolStripMenuItem
             // 
             this.isOlusturToolStripMenuItem.Name = "isOlusturToolStripMenuItem";
-            this.isOlusturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.isOlusturToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.isOlusturToolStripMenuItem.Text = "İş oluştur";
             this.isOlusturToolStripMenuItem.Click += new System.EventHandler(this.isOlusturToolStripMenuItem_Click);
             // 
             // yapilacakIslerToolStripMenuItem
             // 
             this.yapilacakIslerToolStripMenuItem.Name = "yapilacakIslerToolStripMenuItem";
-            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.yapilacakIslerToolStripMenuItem.Text = "Yapılacak İşler";
             this.yapilacakIslerToolStripMenuItem.Click += new System.EventHandler(this.yapilacakIslerToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.bToolStripMenuItem.Text = "Biten İşler";
-            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
+            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click_1);
             // 
             // giderlerToolStripMenuItem
             // 
@@ -182,6 +182,7 @@
             this.dosyaIslemleriToolStripMenuItem.Name = "dosyaIslemleriToolStripMenuItem";
             this.dosyaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.dosyaIslemleriToolStripMenuItem.Text = "Dosya İşlemleri";
+            this.dosyaIslemleriToolStripMenuItem.Click += new System.EventHandler(this.dosyaIslemleriToolStripMenuItem_Click);
             // 
             // MesajToolStripMenu
             // 
