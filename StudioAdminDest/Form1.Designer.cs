@@ -57,6 +57,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.yenile = new System.Windows.Forms.Button();
             this.randevuRed = new System.Windows.Forms.Button();
+            this.işAnaliziToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.odemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,6 +175,9 @@
             // 
             // kasaIslemleriToolStripMenuItem
             // 
+            this.kasaIslemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.işAnaliziToolStripMenuItem,
+            this.odemeToolStripMenuItem});
             this.kasaIslemleriToolStripMenuItem.Name = "kasaIslemleriToolStripMenuItem";
             this.kasaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.kasaIslemleriToolStripMenuItem.Text = "Kasa işlemleri";
@@ -288,6 +293,19 @@
             this.randevuRed.UseVisualStyleBackColor = true;
             this.randevuRed.Click += new System.EventHandler(this.randevuRed_Click);
             // 
+            // işAnaliziToolStripMenuItem
+            // 
+            this.işAnaliziToolStripMenuItem.Name = "işAnaliziToolStripMenuItem";
+            this.işAnaliziToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.işAnaliziToolStripMenuItem.Text = "İs Analizi";
+            // 
+            // odemeToolStripMenuItem
+            // 
+            this.odemeToolStripMenuItem.Name = "odemeToolStripMenuItem";
+            this.odemeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.odemeToolStripMenuItem.Text = "Ödeme";
+            this.odemeToolStripMenuItem.Click += new System.EventHandler(this.odemeToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,6 +359,8 @@
         private System.Windows.Forms.ToolStripMenuItem notlarMenuTool;
         private System.Windows.Forms.ToolStripMenuItem baskiKayitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem baskiGoruntuleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem işAnaliziToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem odemeToolStripMenuItem;
     }
 }
 

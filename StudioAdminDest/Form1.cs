@@ -248,23 +248,10 @@ namespace StudioAdminDest
             bt.ShowDialog();
         }
 
-        private void cikisToolStripMenuItem_Click(object sender, EventArgs e)
+        private void odemeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Application.Exit();
-        }
-
-        private void bToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            bitenIsler bt = new bitenIsler();
-            bt.ShowDialog();
-
-        }
-
-        private void dosyaIslemleriToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Dosya dosya = new Dosya();
-            dosya.Show();
+            borcOdeme bc1 = new borcOdeme();
+            bc1.ShowDialog();
         }
     }
 }

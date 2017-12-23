@@ -80,11 +80,11 @@
     <Compile Include="bitenIsler.Designer.cs">
       <DependentUpon>bitenIsler.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dosya.cs">
+    <Compile Include="borcOdeme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dosya.Designer.cs">
-      <DependentUpon>Dosya.cs</DependentUpon>
+    <Compile Include="borcOdeme.Designer.cs">
+      <DependentUpon>borcOdeme.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -164,8 +164,8 @@
     <EmbeddedResource Include="bitenIsler.resx">
       <DependentUpon>bitenIsler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dosya.resx">
-      <DependentUpon>Dosya.cs</DependentUpon>
+    <EmbeddedResource Include="borcOdeme.resx">
+      <DependentUpon>borcOdeme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -221,35 +221,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>4</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>6</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
