@@ -64,6 +64,7 @@
             // passwordText
             // 
             this.passwordText.Location = new System.Drawing.Point(105, 52);
+            this.passwordText.MaxLength = 18;
             this.passwordText.Name = "passwordText";
             this.passwordText.PasswordChar = '*';
             this.passwordText.Size = new System.Drawing.Size(100, 20);
@@ -89,19 +90,22 @@
             // 
             // kullaniciAdi
             // 
-            this.kullaniciAdi.Location = new System.Drawing.Point(105, 19);
+            this.kullaniciAdi.Location = new System.Drawing.Point(105, 18);
+            this.kullaniciAdi.MaxLength = 18;
             this.kullaniciAdi.Name = "kullaniciAdi";
             this.kullaniciAdi.Size = new System.Drawing.Size(100, 20);
             this.kullaniciAdi.TabIndex = 0;
             // 
             // Giris
             // 
+            this.AcceptButton = this.girisYapButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 199);
             this.Controls.Add(this.girisGroupBox);
             this.Name = "Giris";
             this.Text = "Giris";
+            this.Load += new System.EventHandler(this.Giris_Load);
             this.girisGroupBox.ResumeLayout(false);
             this.girisGroupBox.PerformLayout();
             this.ResumeLayout(false);

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.kullaniciListesi = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.adsoyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.topkazanc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cekimBasiKazanc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.persAlacak = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cekimOdeme = new System.Windows.Forms.Button();
             this.alacakOde = new System.Windows.Forms.Button();
             this.alacak = new System.Windows.Forms.Label();
             this.odemeMiktar = new System.Windows.Forms.TextBox();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.adsoyad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.topkazanc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cekimBasiKazanc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.persAlacak = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // kullaniciListesi
@@ -50,11 +50,41 @@
             this.topkazanc,
             this.cekimBasiKazanc,
             this.persAlacak});
+            this.kullaniciListesi.FullRowSelect = true;
             this.kullaniciListesi.Location = new System.Drawing.Point(12, 12);
             this.kullaniciListesi.Name = "kullaniciListesi";
             this.kullaniciListesi.Size = new System.Drawing.Size(711, 237);
             this.kullaniciListesi.TabIndex = 0;
             this.kullaniciListesi.UseCompatibleStateImageBehavior = false;
+            // 
+            // id
+            // 
+            this.id.Text = "ID";
+            // 
+            // adsoyad
+            // 
+            this.adsoyad.Text = "ADI SOYADI";
+            this.adsoyad.Width = 100;
+            // 
+            // tel
+            // 
+            this.tel.Text = "TELEFON NO";
+            this.tel.Width = 100;
+            // 
+            // topkazanc
+            // 
+            this.topkazanc.Text = "TOPLAM KAZANÇ";
+            this.topkazanc.Width = 100;
+            // 
+            // cekimBasiKazanc
+            // 
+            this.cekimBasiKazanc.Text = "ÇEKİM BAŞI KAZANÇ";
+            this.cekimBasiKazanc.Width = 130;
+            // 
+            // persAlacak
+            // 
+            this.persAlacak.Text = "ALACAK";
+            this.persAlacak.Width = 100;
             // 
             // cekimOdeme
             // 
@@ -88,39 +118,11 @@
             // odemeMiktar
             // 
             this.odemeMiktar.Location = new System.Drawing.Point(729, 148);
+            this.odemeMiktar.MaxLength = 11;
             this.odemeMiktar.Name = "odemeMiktar";
             this.odemeMiktar.Size = new System.Drawing.Size(75, 20);
             this.odemeMiktar.TabIndex = 4;
             this.odemeMiktar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.odemeMiktar_KeyPress);
-            // 
-            // id
-            // 
-            this.id.Text = "ID";
-            // 
-            // adsoyad
-            // 
-            this.adsoyad.Text = "ADI SOYADI";
-            this.adsoyad.Width = 100;
-            // 
-            // topkazanc
-            // 
-            this.topkazanc.Text = "TOPLAM KAZANÇ";
-            this.topkazanc.Width = 100;
-            // 
-            // cekimBasiKazanc
-            // 
-            this.cekimBasiKazanc.Text = "ÇEKİM BAŞI KAZANÇ";
-            this.cekimBasiKazanc.Width = 130;
-            // 
-            // persAlacak
-            // 
-            this.persAlacak.Text = "ALACAK";
-            this.persAlacak.Width = 100;
-            // 
-            // tel
-            // 
-            this.tel.Text = "TELEFON NO";
-            this.tel.Width = 100;
             // 
             // borcOdeme
             // 

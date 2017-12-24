@@ -63,6 +63,7 @@
             // isAdSoyad
             // 
             this.isAdSoyad.Location = new System.Drawing.Point(148, 12);
+            this.isAdSoyad.MaxLength = 20;
             this.isAdSoyad.Name = "isAdSoyad";
             this.isAdSoyad.Size = new System.Drawing.Size(141, 20);
             this.isAdSoyad.TabIndex = 1;
@@ -164,6 +165,7 @@
             // isReferans
             // 
             this.isReferans.Location = new System.Drawing.Point(148, 238);
+            this.isReferans.MaxLength = 20;
             this.isReferans.Name = "isReferans";
             this.isReferans.Size = new System.Drawing.Size(136, 20);
             this.isReferans.TabIndex = 13;
@@ -194,6 +196,7 @@
             // adresRichTextbox
             // 
             this.adresRichTextbox.Location = new System.Drawing.Point(146, 172);
+            this.adresRichTextbox.MaxLength = 120;
             this.adresRichTextbox.Name = "adresRichTextbox";
             this.adresRichTextbox.Size = new System.Drawing.Size(138, 46);
             this.adresRichTextbox.TabIndex = 16;
@@ -202,6 +205,7 @@
             // fiyatTextbox
             // 
             this.fiyatTextbox.Location = new System.Drawing.Point(146, 132);
+            this.fiyatTextbox.MaxLength = 4;
             this.fiyatTextbox.Name = "fiyatTextbox";
             this.fiyatTextbox.Size = new System.Drawing.Size(43, 20);
             this.fiyatTextbox.TabIndex = 17;

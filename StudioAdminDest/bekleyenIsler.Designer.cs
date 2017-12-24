@@ -38,6 +38,7 @@
             this.adres = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.teslimDurumu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.isiYapanlar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ucretDurumu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.yenile = new System.Windows.Forms.Button();
             this.isAtama = new System.Windows.Forms.Button();
             this.isAtamaGroupbox = new System.Windows.Forms.GroupBox();
@@ -49,7 +50,6 @@
             this.ucretKontrol = new System.Windows.Forms.TextBox();
             this.personelCb = new System.Windows.Forms.ComboBox();
             this.ucretOnayla = new System.Windows.Forms.Button();
-            this.ucretDurumu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.teslimEt = new System.Windows.Forms.Button();
             this.isAtamaGroupbox.SuspendLayout();
             this.ucretlendirme.SuspendLayout();
@@ -68,6 +68,7 @@
             this.teslimDurumu,
             this.isiYapanlar,
             this.ucretDurumu});
+            this.onayliListe.FullRowSelect = true;
             this.onayliListe.Location = new System.Drawing.Point(29, 22);
             this.onayliListe.Name = "onayliListe";
             this.onayliListe.Size = new System.Drawing.Size(601, 213);
@@ -109,6 +110,10 @@
             // isiYapanlar
             // 
             this.isiYapanlar.Text = "İŞİ YAPANLAR";
+            // 
+            // ucretDurumu
+            // 
+            this.ucretDurumu.Text = "ÜCRET DURUMU";
             // 
             // yenile
             // 
@@ -221,10 +226,6 @@
             this.ucretOnayla.Text = "SEÇİLİ İŞİN ÜCRET ÖDEMESİNİ TAMAMLA";
             this.ucretOnayla.UseVisualStyleBackColor = true;
             this.ucretOnayla.Click += new System.EventHandler(this.ucretOnayla_Click);
-            // 
-            // ucretDurumu
-            // 
-            this.ucretDurumu.Text = "ÜCRET DURUMU";
             // 
             // teslimEt
             // 
