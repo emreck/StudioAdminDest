@@ -155,6 +155,7 @@
             // arama
             // 
             this.arama.Location = new System.Drawing.Point(12, 10);
+            this.arama.MaxLength = 10;
             this.arama.Multiline = true;
             this.arama.Name = "arama";
             this.arama.Size = new System.Drawing.Size(100, 20);

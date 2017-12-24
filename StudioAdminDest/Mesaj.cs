@@ -62,7 +62,22 @@ namespace StudioAdminDest
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
         
         }
+        public bool tehlike(string veri)
+        {
+            string[] strList = veri.Split(' ');
+            List<string> yasakKelime = new List<string>
+                (new string[]
+                {"select","where","from","drop","alter table","table","insert into",
+                    "insert","or","OR","join","update","set","script","body","alert","delete,","'"});
+            for (int i = 0; i < strList.Length; i++)
+            {
+                if (yasakKelime.Find(n => n == strList[i].ToString()) != null)
+                    return false;
+            }
 
+            return true;
+        }
+        bool kontrol;
         private void mesajYolla_Click(object sender, EventArgs e)
         {
             string durum = "okunmadi";
@@ -76,14 +91,24 @@ namespace StudioAdminDest
                 MySqlConnection baglanti;
                 SqlBaglanti baglan = new SqlBaglanti();
                 baglanti = baglan.baglanti();
-                MySqlCommand ekle = new MySqlCommand("insert into Mesajlar (kimden,kime,mesaj,tarih,okundu) values ('" + adminID.ToString() + "','" + Form1.ajansID.ToString() + "','" + mesajicerik.Text + "','" + tarih.ToString() + "','" + durum.ToString() + "') ", baglanti);
-                ekle.ExecuteNonQuery();
-                baglanti.Close();
-                MessageBox.Show("Mesajınız Başarıyla iletişmiştir.");
-                errorProvider1.Clear();
-                mesajicerik.Text = string.Empty;
-                verilerigoster();
-                mesajgoster.Items[mesajgoster.Items.Count - 1].EnsureVisible();
+               kontrol= tehlike(mesajicerik.Text);
+                if (kontrol)
+                {
+
+
+                    MySqlCommand ekle = new MySqlCommand("insert into Mesajlar (kimden,kime,mesaj,tarih,okundu) values ('" + adminID.ToString() + "','" + Form1.ajansID.ToString() + "','" + mesajicerik.Text + "','" + tarih.ToString() + "','" + durum.ToString() + "') ", baglanti);
+                    ekle.ExecuteNonQuery();
+                    baglanti.Close();
+                    MessageBox.Show("Mesajınız Başarıyla iletişmiştir.");
+                    errorProvider1.Clear();
+                    mesajicerik.Text = string.Empty;
+                    verilerigoster();
+                    mesajgoster.Items[mesajgoster.Items.Count - 1].EnsureVisible();
+                }
+                else
+                {
+                    MessageBox.Show("Uygunsuz içerik girişi.");
+                }
             }
         }
     }

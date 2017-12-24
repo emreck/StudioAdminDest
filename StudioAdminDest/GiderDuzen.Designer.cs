@@ -82,6 +82,7 @@
             // giderAdi
             // 
             this.giderAdi.Location = new System.Drawing.Point(98, 79);
+            this.giderAdi.MaxLength = 20;
             this.giderAdi.Name = "giderAdi";
             this.giderAdi.Size = new System.Drawing.Size(121, 20);
             this.giderAdi.TabIndex = 11;
@@ -90,6 +91,7 @@
             // GiderTutar
             // 
             this.GiderTutar.Location = new System.Drawing.Point(98, 105);
+            this.GiderTutar.MaxLength = 4;
             this.GiderTutar.Name = "GiderTutar";
             this.GiderTutar.Size = new System.Drawing.Size(121, 20);
             this.GiderTutar.TabIndex = 12;

@@ -147,6 +147,7 @@
             // baskiAra
             // 
             this.baskiAra.Location = new System.Drawing.Point(12, 10);
+            this.baskiAra.MaxLength = 10;
             this.baskiAra.Name = "baskiAra";
             this.baskiAra.Size = new System.Drawing.Size(100, 20);
             this.baskiAra.TabIndex = 1;

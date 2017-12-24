@@ -99,6 +99,7 @@
             // ısturu2
             // 
             this.ısturu2.Location = new System.Drawing.Point(109, 72);
+            this.ısturu2.MaxLength = 20;
             this.ısturu2.Name = "ısturu2";
             this.ısturu2.Size = new System.Drawing.Size(100, 20);
             this.ısturu2.TabIndex = 0;
@@ -152,6 +153,7 @@
             // video
             // 
             this.video.Location = new System.Drawing.Point(107, 116);
+            this.video.MaxLength = 20;
             this.video.Name = "video";
             this.video.Size = new System.Drawing.Size(100, 20);
             this.video.TabIndex = 4;
@@ -169,6 +171,7 @@
             // fotograf
             // 
             this.fotograf.Location = new System.Drawing.Point(107, 51);
+            this.fotograf.MaxLength = 20;
             this.fotograf.Name = "fotograf";
             this.fotograf.Size = new System.Drawing.Size(100, 20);
             this.fotograf.TabIndex = 0;
@@ -190,6 +193,7 @@
             // cekimyer2
             // 
             this.cekimyer2.Location = new System.Drawing.Point(108, 77);
+            this.cekimyer2.MaxLength = 20;
             this.cekimyer2.Name = "cekimyer2";
             this.cekimyer2.Size = new System.Drawing.Size(100, 20);
             this.cekimyer2.TabIndex = 2;

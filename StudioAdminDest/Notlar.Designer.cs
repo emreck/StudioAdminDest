@@ -31,22 +31,23 @@
             this.components = new System.ComponentModel.Container();
             this.NotYaz = new System.Windows.Forms.TextBox();
             this.NotGoster = new System.Windows.Forms.ListView();
-            this.notPaylas = new System.Windows.Forms.Button();
-            this.kullanici = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.notPaylas = new System.Windows.Forms.Button();
+            this.kullanici = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // NotYaz
             // 
             this.NotYaz.Location = new System.Drawing.Point(12, 198);
+            this.NotYaz.MaxLength = 200;
             this.NotYaz.Multiline = true;
             this.NotYaz.Name = "NotYaz";
             this.NotYaz.Size = new System.Drawing.Size(438, 76);
@@ -67,32 +68,6 @@
             this.NotGoster.UseCompatibleStateImageBehavior = false;
             this.NotGoster.View = System.Windows.Forms.View.Details;
             // 
-            // notPaylas
-            // 
-            this.notPaylas.Location = new System.Drawing.Point(12, 280);
-            this.notPaylas.Name = "notPaylas";
-            this.notPaylas.Size = new System.Drawing.Size(102, 46);
-            this.notPaylas.TabIndex = 2;
-            this.notPaylas.Text = "Not Paylaş";
-            this.notPaylas.UseVisualStyleBackColor = true;
-            this.notPaylas.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // kullanici
-            // 
-            this.kullanici.Location = new System.Drawing.Point(12, 172);
-            this.kullanici.Name = "kullanici";
-            this.kullanici.Size = new System.Drawing.Size(100, 20);
-            this.kullanici.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Not Yazan Kullanıcı ";
-            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Notu Paylaşan";
@@ -108,23 +83,50 @@
             this.columnHeader3.Text = "Tarih";
             this.columnHeader3.Width = 120;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.silToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(87, 26);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            // 
+            // notPaylas
+            // 
+            this.notPaylas.Location = new System.Drawing.Point(12, 280);
+            this.notPaylas.Name = "notPaylas";
+            this.notPaylas.Size = new System.Drawing.Size(102, 46);
+            this.notPaylas.TabIndex = 2;
+            this.notPaylas.Text = "Not Paylaş";
+            this.notPaylas.UseVisualStyleBackColor = true;
+            this.notPaylas.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // kullanici
+            // 
+            this.kullanici.Location = new System.Drawing.Point(12, 172);
+            this.kullanici.MaxLength = 20;
+            this.kullanici.Name = "kullanici";
+            this.kullanici.Size = new System.Drawing.Size(100, 20);
+            this.kullanici.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Not Yazan Kullanıcı ";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Notlar
             // 
@@ -139,8 +141,8 @@
             this.Name = "Notlar";
             this.Text = "Notlar";
             this.Load += new System.EventHandler(this.Notlar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

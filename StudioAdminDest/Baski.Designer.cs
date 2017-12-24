@@ -117,6 +117,7 @@
             // karton
             // 
             this.karton.Location = new System.Drawing.Point(144, 90);
+            this.karton.MaxLength = 3;
             this.karton.Name = "karton";
             this.karton.Size = new System.Drawing.Size(121, 20);
             this.karton.TabIndex = 9;
@@ -125,6 +126,7 @@
             // plastik
             // 
             this.plastik.Location = new System.Drawing.Point(144, 116);
+            this.plastik.MaxLength = 3;
             this.plastik.Name = "plastik";
             this.plastik.Size = new System.Drawing.Size(121, 20);
             this.plastik.TabIndex = 10;
@@ -133,6 +135,7 @@
             // luks
             // 
             this.luks.Location = new System.Drawing.Point(144, 142);
+            this.luks.MaxLength = 3;
             this.luks.Name = "luks";
             this.luks.Size = new System.Drawing.Size(121, 20);
             this.luks.TabIndex = 11;
@@ -141,6 +144,7 @@
             // ucretsiz
             // 
             this.ucretsiz.Location = new System.Drawing.Point(144, 168);
+            this.ucretsiz.MaxLength = 3;
             this.ucretsiz.Name = "ucretsiz";
             this.ucretsiz.Size = new System.Drawing.Size(121, 20);
             this.ucretsiz.TabIndex = 12;
@@ -149,6 +153,7 @@
             // toplam
             // 
             this.toplam.Location = new System.Drawing.Point(144, 194);
+            this.toplam.MaxLength = 3;
             this.toplam.Name = "toplam";
             this.toplam.Size = new System.Drawing.Size(121, 20);
             this.toplam.TabIndex = 13;
@@ -184,6 +189,7 @@
             // ucret
             // 
             this.ucret.Location = new System.Drawing.Point(144, 222);
+            this.ucret.MaxLength = 5;
             this.ucret.Name = "ucret";
             this.ucret.Size = new System.Drawing.Size(121, 20);
             this.ucret.TabIndex = 17;

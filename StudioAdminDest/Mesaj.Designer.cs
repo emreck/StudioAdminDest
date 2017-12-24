@@ -70,6 +70,7 @@
             // mesajicerik
             // 
             this.mesajicerik.Location = new System.Drawing.Point(12, 184);
+            this.mesajicerik.MaxLength = 200;
             this.mesajicerik.Multiline = true;
             this.mesajicerik.Name = "mesajicerik";
             this.mesajicerik.Size = new System.Drawing.Size(536, 65);

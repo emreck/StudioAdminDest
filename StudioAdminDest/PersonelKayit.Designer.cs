@@ -118,6 +118,7 @@
             // kulAdi
             // 
             this.kulAdi.Location = new System.Drawing.Point(166, 12);
+            this.kulAdi.MaxLength = 20;
             this.kulAdi.Name = "kulAdi";
             this.kulAdi.Size = new System.Drawing.Size(159, 20);
             this.kulAdi.TabIndex = 8;
@@ -125,13 +126,16 @@
             // Sifre
             // 
             this.Sifre.Location = new System.Drawing.Point(166, 39);
+            this.Sifre.MaxLength = 20;
             this.Sifre.Name = "Sifre";
+            this.Sifre.PasswordChar = '*';
             this.Sifre.Size = new System.Drawing.Size(159, 20);
             this.Sifre.TabIndex = 9;
             // 
             // AdSoyad
             // 
             this.AdSoyad.Location = new System.Drawing.Point(166, 96);
+            this.AdSoyad.MaxLength = 25;
             this.AdSoyad.Name = "AdSoyad";
             this.AdSoyad.Size = new System.Drawing.Size(159, 20);
             this.AdSoyad.TabIndex = 10;
@@ -140,6 +144,7 @@
             // Adres
             // 
             this.Adres.Location = new System.Drawing.Point(166, 182);
+            this.Adres.MaxLength = 50;
             this.Adres.Name = "Adres";
             this.Adres.Size = new System.Drawing.Size(159, 20);
             this.Adres.TabIndex = 13;
@@ -147,6 +152,7 @@
             // Kan
             // 
             this.Kan.Location = new System.Drawing.Point(166, 214);
+            this.Kan.MaxLength = 10;
             this.Kan.Name = "Kan";
             this.Kan.Size = new System.Drawing.Size(159, 20);
             this.Kan.TabIndex = 14;
@@ -164,6 +170,7 @@
             // Tel
             // 
             this.Tel.Location = new System.Drawing.Point(166, 128);
+            this.Tel.Mask = "(999) 000-0000";
             this.Tel.Name = "Tel";
             this.Tel.Size = new System.Drawing.Size(159, 20);
             this.Tel.TabIndex = 17;
@@ -172,6 +179,7 @@
             // YakinTel
             // 
             this.YakinTel.Location = new System.Drawing.Point(166, 156);
+            this.YakinTel.Mask = "(999) 000-0000";
             this.YakinTel.Name = "YakinTel";
             this.YakinTel.Size = new System.Drawing.Size(159, 20);
             this.YakinTel.TabIndex = 18;
@@ -189,6 +197,7 @@
             // Kazanc
             // 
             this.Kazanc.Location = new System.Drawing.Point(166, 247);
+            this.Kazanc.MaxLength = 10;
             this.Kazanc.Name = "Kazanc";
             this.Kazanc.Size = new System.Drawing.Size(159, 20);
             this.Kazanc.TabIndex = 15;
@@ -211,7 +220,9 @@
             // sifretek
             // 
             this.sifretek.Location = new System.Drawing.Point(166, 66);
+            this.sifretek.MaxLength = 20;
             this.sifretek.Name = "sifretek";
+            this.sifretek.PasswordChar = '*';
             this.sifretek.Size = new System.Drawing.Size(159, 20);
             this.sifretek.TabIndex = 20;
             // 

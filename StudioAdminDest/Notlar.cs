@@ -55,20 +55,36 @@ namespace StudioAdminDest
         {
 
         }
+        public bool tehlike(string veri)
+        {
+            string[] strList = veri.Split(' ');
+            List<string> yasakKelime = new List<string>
+                (new string[]
+                {"select","where","from","drop","alter table","table","insert into",
+                    "insert","or","OR","join","update","set","script","body","alert","delete,","'","''"});
+            for (int i = 0; i < strList.Length; i++)
+            {
+                if (yasakKelime.Find(n => n == strList[i].ToString()) != null)
+                    return false;
+            }
 
+            return true;
+        }
+        
         private void button1_Click_1(object sender, EventArgs e)
         {
             DateTime tarih = DateTime.Now;
-            if (string.IsNullOrWhiteSpace(NotYaz.Text))
+            if (string.IsNullOrWhiteSpace(NotYaz.Text) || tehlike(NotYaz.Text)==false )
             {
                 errorProvider1.SetError(NotYaz, "Boş Not Bırakılamaz !");
             }
-            else if (string.IsNullOrWhiteSpace(kullanici.Text))
+            else if (string.IsNullOrWhiteSpace(kullanici.Text) || tehlike(kullanici.Text) == false)
             {
                 errorProvider1.SetError(kullanici, "Bir Kullanıcı adı giriniz !");
             }
             else
             {
+                
                 MySqlConnection baglanti;
                 SqlBaglanti baglan = new SqlBaglanti();
                 baglanti = baglan.baglanti();

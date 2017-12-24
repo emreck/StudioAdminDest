@@ -127,6 +127,7 @@
             // kulad
             // 
             this.kulad.Location = new System.Drawing.Point(120, 12);
+            this.kulad.MaxLength = 50;
             this.kulad.Name = "kulad";
             this.kulad.Size = new System.Drawing.Size(100, 20);
             this.kulad.TabIndex = 8;
@@ -134,6 +135,7 @@
             // sifre
             // 
             this.sifre.Location = new System.Drawing.Point(120, 38);
+            this.sifre.MaxLength = 20;
             this.sifre.Name = "sifre";
             this.sifre.Size = new System.Drawing.Size(100, 20);
             this.sifre.TabIndex = 9;
@@ -141,6 +143,7 @@
             // telnumara
             // 
             this.telnumara.Location = new System.Drawing.Point(120, 115);
+            this.telnumara.MaxLength = 11;
             this.telnumara.Name = "telnumara";
             this.telnumara.Size = new System.Drawing.Size(100, 20);
             this.telnumara.TabIndex = 10;
@@ -149,6 +152,7 @@
             // yakintelnum
             // 
             this.yakintelnum.Location = new System.Drawing.Point(120, 141);
+            this.yakintelnum.MaxLength = 11;
             this.yakintelnum.Name = "yakintelnum";
             this.yakintelnum.Size = new System.Drawing.Size(100, 20);
             this.yakintelnum.TabIndex = 11;
@@ -157,6 +161,7 @@
             // adres
             // 
             this.adres.Location = new System.Drawing.Point(120, 167);
+            this.adres.MaxLength = 50;
             this.adres.Name = "adres";
             this.adres.Size = new System.Drawing.Size(100, 20);
             this.adres.TabIndex = 12;
@@ -164,6 +169,7 @@
             // kangrubu
             // 
             this.kangrubu.Location = new System.Drawing.Point(120, 193);
+            this.kangrubu.MaxLength = 10;
             this.kangrubu.Name = "kangrubu";
             this.kangrubu.Size = new System.Drawing.Size(100, 20);
             this.kangrubu.TabIndex = 13;
@@ -171,6 +177,7 @@
             // cekimkazanc
             // 
             this.cekimkazanc.Location = new System.Drawing.Point(120, 219);
+            this.cekimkazanc.MaxLength = 10;
             this.cekimkazanc.Name = "cekimkazanc";
             this.cekimkazanc.Size = new System.Drawing.Size(100, 20);
             this.cekimkazanc.TabIndex = 14;
@@ -179,6 +186,7 @@
             // adiSoyadi
             // 
             this.adiSoyadi.Location = new System.Drawing.Point(120, 89);
+            this.adiSoyadi.MaxLength = 20;
             this.adiSoyadi.Name = "adiSoyadi";
             this.adiSoyadi.Size = new System.Drawing.Size(100, 20);
             this.adiSoyadi.TabIndex = 15;
@@ -201,6 +209,7 @@
             // sifretekrar
             // 
             this.sifretekrar.Location = new System.Drawing.Point(120, 64);
+            this.sifretekrar.MaxLength = 20;
             this.sifretekrar.Name = "sifretekrar";
             this.sifretekrar.Size = new System.Drawing.Size(100, 20);
             this.sifretekrar.TabIndex = 17;

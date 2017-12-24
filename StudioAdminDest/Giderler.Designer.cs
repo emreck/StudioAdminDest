@@ -88,6 +88,7 @@
             // giderAdi
             // 
             this.giderAdi.Location = new System.Drawing.Point(76, 51);
+            this.giderAdi.MaxLength = 20;
             this.giderAdi.Name = "giderAdi";
             this.giderAdi.Size = new System.Drawing.Size(121, 20);
             this.giderAdi.TabIndex = 3;
@@ -96,6 +97,7 @@
             // giderTutar
             // 
             this.giderTutar.Location = new System.Drawing.Point(76, 93);
+            this.giderTutar.MaxLength = 4;
             this.giderTutar.Name = "giderTutar";
             this.giderTutar.Size = new System.Drawing.Size(121, 20);
             this.giderTutar.TabIndex = 4;
@@ -243,6 +245,7 @@
             // aramaText
             // 
             this.aramaText.Location = new System.Drawing.Point(65, 5);
+            this.aramaText.MaxLength = 10;
             this.aramaText.Name = "aramaText";
             this.aramaText.Size = new System.Drawing.Size(103, 20);
             this.aramaText.TabIndex = 11;
