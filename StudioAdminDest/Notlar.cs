@@ -95,6 +95,7 @@ namespace StudioAdminDest
                 kullanici.Text = string.Empty;
                 NotYaz.Text = string.Empty;
                 verilerigoster();
+                errorProvider1.Clear();
                 
             }
         }
