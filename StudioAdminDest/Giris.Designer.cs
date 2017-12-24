@@ -100,14 +100,6 @@
             // 
             // sifremiUnuttumLinkLabel
             // 
-            this.sifremiUnuttumLinkLabel.AutoSize = true;
-            this.sifremiUnuttumLinkLabel.Location = new System.Drawing.Point(211, 106);
-            this.sifremiUnuttumLinkLabel.Name = "sifremiUnuttumLinkLabel";
-            this.sifremiUnuttumLinkLabel.Size = new System.Drawing.Size(81, 13);
-            this.sifremiUnuttumLinkLabel.TabIndex = 5;
-            this.sifremiUnuttumLinkLabel.TabStop = true;
-            this.sifremiUnuttumLinkLabel.Text = "Şifremi Unuttum";
-            this.sifremiUnuttumLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.sifremiUnuttumLinkLabel_LinkClicked);
             // 
             // Giris
             // 
