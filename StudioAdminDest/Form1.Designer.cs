@@ -234,6 +234,7 @@
             this.randevuTarih,
             this.randevuSaat,
             this.referans});
+            this.beklemedeList.FullRowSelect = true;
             this.beklemedeList.Location = new System.Drawing.Point(12, 72);
             this.beklemedeList.Name = "beklemedeList";
             this.beklemedeList.Size = new System.Drawing.Size(835, 202);

@@ -121,6 +121,7 @@ namespace StudioAdminDest
                     MySqlCommand alacakOde = new MySqlCommand("update Kullanicilar set Alacaklari='"+guncelAlacak+"' , TopKazanc='"+guncelTopKazanc+"' where ID='"+ID+"' ", baglanti);
                     alacakOde.ExecuteNonQuery();
                     baglanti.Close();
+                    MessageBox.Show("Başarılı !");
                 }
                 else if(ucret>oncekiAlacaklari)
                 {
@@ -195,7 +196,6 @@ namespace StudioAdminDest
             if (kullaniciListesi.SelectedItems.Count == 1)
             {
                 persAlacakOde(Convert.ToInt32(kullaniciListesi.SelectedItems[0].Text));
-                MessageBox.Show("BAŞARILI !");
                 borcOdemeListele();
             }
             else if (kullaniciListesi.SelectedItems.Count > 1)

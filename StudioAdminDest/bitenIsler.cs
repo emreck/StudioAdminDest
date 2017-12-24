@@ -78,25 +78,37 @@ namespace StudioAdminDest
 
         public void ucretOdeme(int ID)
         {
-            if (bitenIslerListView.SelectedItems.Count==1)
+            try
             {
-                string UCRETYENILEME = "ALINDI";
-                SqlBaglanti con = new SqlBaglanti();
-                MySqlConnection baglanti = con.baglanti();
+                if (bitenIslerListView.SelectedItems.Count == 1)
+                {
+                    string UCRETYENILEME = "ALINDI";
+                    SqlBaglanti con = new SqlBaglanti();
+                    MySqlConnection baglanti = con.baglanti();
 
-                MySqlCommand ucretOdemeYenile = new MySqlCommand("update Isler set UcretDurumu='"+UCRETYENILEME+"' where ID='"+ID+"' ", baglanti);
-                ucretOdemeYenile.ExecuteNonQuery();
+                    MySqlCommand ucretOdemeYenile = new MySqlCommand("update Isler set UcretDurumu='" + UCRETYENILEME + "' where ID='" + ID + "' ", baglanti);
+                    ucretOdemeYenile.ExecuteNonQuery();
 
-                baglanti.Close();
+                    baglanti.Close();
+                }
+                else if (bitenIslerListView.SelectedItems.Count > 1)
+                {
+                    MessageBox.Show("Birden fazla iş seçmeyiniz !");
+                }
+                else
+                {
+                    MessageBox.Show("Herhangi bir iş seçtiğinize emin olun !");
+                }
             }
-            else if (bitenIslerListView.SelectedItems.Count > 1)
+            catch(MySqlException)
             {
-                MessageBox.Show("Birden fazla iş seçmeyiniz !");
+                MessageBox.Show("Sunucu Hatası !");
             }
-            else
+            catch
             {
-                MessageBox.Show("Herhangi bir iş seçtiğinize emin olun !");
+                MessageBox.Show("Hata ! Herhangi bir iş seçtiğinize emin olun !");
             }
+         
         }
         private void bitenIslerYenile_Click(object sender, EventArgs e)
         {
@@ -117,15 +129,31 @@ namespace StudioAdminDest
 
         private void odemeTamamla_Click(object sender, EventArgs e)
         {
-            if (bitenIslerListView.SelectedItems[0].SubItems[11].Text=="ALINDI")
+            try
             {
-                MessageBox.Show("Alınan ucreti tıklamadıgına emin olun !");
+                if (bitenIslerListView.SelectedItems[0].SubItems[11].Text == "ALINDI")
+                {
+                    MessageBox.Show("Alınan ucreti tıklamadıgına emin olun !");
+                }
+                else
+                {
+                    ucretOdeme(Convert.ToInt32(bitenIslerListView.SelectedItems[0].Text));
+                    bitenListele();
+                }
             }
-            else
+            catch(ArgumentOutOfRangeException)
             {
-                ucretOdeme(Convert.ToInt32(bitenIslerListView.SelectedItems[0].Text));
-                bitenListele();
+                MessageBox.Show("Herhangi bir iş seçtiğinize emin olun !");
             }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Sunucu hatası !");
+            }
+            catch
+            {
+                MessageBox.Show("Bilinmeyen bir hata !");
+            }
+         
         }
     }
 }
