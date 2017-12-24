@@ -21,7 +21,10 @@ namespace StudioAdminDest
         private void Mesaj_Load(object sender, EventArgs e)
         {
             verilerigoster();
-            mesajgoster.Items[mesajgoster.Items.Count - 1].EnsureVisible();
+            if (mesajgoster.Items.Count > 0)
+                mesajgoster.Items[mesajgoster.Items.Count - 1].EnsureVisible();
+            else
+                MessageBox.Show("Henüz mesajınız yok.");
         }
         string adminID = "0";
         public void verilerigoster()// Veritabanındaki verileri listview'de gösterir.
