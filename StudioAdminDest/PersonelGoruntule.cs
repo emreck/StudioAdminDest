@@ -153,5 +153,10 @@ namespace StudioAdminDest
                }
 
            }
+
+        private void arama_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar);
+        }
     }
 }

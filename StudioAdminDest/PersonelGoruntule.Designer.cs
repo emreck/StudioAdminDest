@@ -162,6 +162,7 @@
             this.arama.Text = "Ad-Soyad Araması";
             this.arama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.arama.MouseClick += new System.Windows.Forms.MouseEventHandler(this.arama_MouseClick);
+            this.arama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.arama_KeyPress);
             // 
             // button1
             // 

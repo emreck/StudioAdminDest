@@ -80,6 +80,7 @@ namespace StudioAdminDest
                 ekle.ExecuteNonQuery();
                 baglanti.Close();
                 MessageBox.Show("Mesajınız Başarıyla iletişmiştir.");
+                errorProvider1.Clear();
                 mesajicerik.Text = string.Empty;
                 verilerigoster();
                 mesajgoster.Items[mesajgoster.Items.Count - 1].EnsureVisible();

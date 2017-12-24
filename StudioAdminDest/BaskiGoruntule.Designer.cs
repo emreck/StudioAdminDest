@@ -42,11 +42,11 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.baskisilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baskiDuzenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yenileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baskiAra = new System.Windows.Forms.TextBox();
             this.baskiAraButon = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.yenileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +121,7 @@
             this.baskiDuzenToolStripMenuItem,
             this.yenileToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 70);
             // 
             // baskisilToolStripMenuItem
             // 
@@ -137,12 +137,20 @@
             this.baskiDuzenToolStripMenuItem.Text = "Baskı Düzenle";
             this.baskiDuzenToolStripMenuItem.Click += new System.EventHandler(this.baskiDuzenToolStripMenuItem_Click);
             // 
+            // yenileToolStripMenuItem
+            // 
+            this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
+            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.yenileToolStripMenuItem.Text = "Yenile";
+            this.yenileToolStripMenuItem.Click += new System.EventHandler(this.yenileToolStripMenuItem_Click);
+            // 
             // baskiAra
             // 
             this.baskiAra.Location = new System.Drawing.Point(12, 10);
             this.baskiAra.Name = "baskiAra";
             this.baskiAra.Size = new System.Drawing.Size(100, 20);
             this.baskiAra.TabIndex = 1;
+            this.baskiAra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.baskiAra_KeyPress);
             // 
             // baskiAraButon
             // 
@@ -171,13 +179,6 @@
             this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "0";
-            // 
-            // yenileToolStripMenuItem
-            // 
-            this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
-            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.yenileToolStripMenuItem.Text = "Yenile";
-            this.yenileToolStripMenuItem.Click += new System.EventHandler(this.yenileToolStripMenuItem_Click);
             // 
             // BaskiGoruntule
             // 

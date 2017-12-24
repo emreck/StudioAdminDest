@@ -53,20 +53,22 @@ namespace StudioAdminDest
 
 
 
-
-            if (giderTip.Text == "" || GiderTutar.Text == "" || giderAdi.Text == "" || personel.Text=="")
+            if (giderTip.Text == "")
             {
-                if (giderTip.Text == "")
-                    errorProvider1.SetError(giderTip, "Bu Alan Boş Geçilemez!");
-                if (GiderTutar.Text == "")
-                    errorProvider1.SetError(GiderTutar, "Bu Alan Boş Geçilemez!");
-                if (giderAdi.Text == "")
-                    errorProvider1.SetError(giderAdi, "Bu Alan Boş Geçilemez!");
-                if (personel.Text == "")
-                    errorProvider1.SetError(personel, "Bu Alan Boş Geçilemez!");
-
+                errorProvider1.SetError(giderTip, "Bu Alan Boş Geçilemez!");
             }
-          
+            else if(GiderTutar.Text == "")
+            {
+                errorProvider1.SetError(GiderTutar, "Bu Alan Boş Geçilemez!");
+            }
+            else if (giderAdi.Text == "")
+            {
+                errorProvider1.SetError(giderAdi, "Bu Alan Boş Geçilemez!");
+            }
+            else if (personel.Text == "")
+            {
+                errorProvider1.SetError(personel, "Bu Alan Boş Geçilemez!");
+            }
             else
             {
                 
@@ -105,6 +107,16 @@ namespace StudioAdminDest
             toplamucret();
             errorProvider1.Clear();
            
+        }
+
+        private void GiderTutar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);//sayısal
+        }
+
+        private void giderAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar);//karakter
         }
     }
 }
