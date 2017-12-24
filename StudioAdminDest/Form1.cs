@@ -271,5 +271,11 @@ namespace StudioAdminDest
             Tanimlama tanim = new Tanimlama();
             tanim.Show();
         }
+
+        private void isAnaliziToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Analiz a1 = new Analiz();
+            a1.Show();
+        }
     }
 }
