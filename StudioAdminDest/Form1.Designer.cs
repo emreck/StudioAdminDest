@@ -146,8 +146,9 @@
             // fiyatlandirmaIslemleriToolStripMenuItem
             // 
             this.fiyatlandirmaIslemleriToolStripMenuItem.Name = "fiyatlandirmaIslemleriToolStripMenuItem";
-            this.fiyatlandirmaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
-            this.fiyatlandirmaIslemleriToolStripMenuItem.Text = "Fiyatlandırma İşlemleri";
+            this.fiyatlandirmaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.fiyatlandirmaIslemleriToolStripMenuItem.Text = "Tanımlama İşlemleri";
+            this.fiyatlandirmaIslemleriToolStripMenuItem.Click += new System.EventHandler(this.fiyatlandirmaIslemleriToolStripMenuItem_Click);
             // 
             // baskiIsleriToolStripMenuItem
             // 
@@ -200,6 +201,7 @@
             this.dosyaIslemleriToolStripMenuItem.Name = "dosyaIslemleriToolStripMenuItem";
             this.dosyaIslemleriToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.dosyaIslemleriToolStripMenuItem.Text = "Dosya İşlemleri";
+            this.dosyaIslemleriToolStripMenuItem.Click += new System.EventHandler(this.dosyaIslemleriToolStripMenuItem_Click);
             // 
             // MesajToolStripMenu
             // 
