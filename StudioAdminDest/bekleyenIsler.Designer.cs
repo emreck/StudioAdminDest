@@ -69,9 +69,9 @@
             this.isiYapanlar,
             this.ucretDurumu});
             this.onayliListe.FullRowSelect = true;
-            this.onayliListe.Location = new System.Drawing.Point(29, 22);
+            this.onayliListe.Location = new System.Drawing.Point(12, 16);
             this.onayliListe.Name = "onayliListe";
-            this.onayliListe.Size = new System.Drawing.Size(601, 213);
+            this.onayliListe.Size = new System.Drawing.Size(884, 225);
             this.onayliListe.TabIndex = 0;
             this.onayliListe.UseCompatibleStateImageBehavior = false;
             // 
@@ -117,9 +117,9 @@
             // 
             // yenile
             // 
-            this.yenile.Location = new System.Drawing.Point(636, 169);
+            this.yenile.Location = new System.Drawing.Point(695, 318);
             this.yenile.Name = "yenile";
-            this.yenile.Size = new System.Drawing.Size(89, 66);
+            this.yenile.Size = new System.Drawing.Size(201, 66);
             this.yenile.TabIndex = 1;
             this.yenile.Text = "İŞLERİ YENİLE";
             this.yenile.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.isAtamaGroupbox.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.isAtamaGroupbox.Controls.Add(this.personelAta);
             this.isAtamaGroupbox.Controls.Add(this.isAtama);
-            this.isAtamaGroupbox.Location = new System.Drawing.Point(29, 250);
+            this.isAtamaGroupbox.Location = new System.Drawing.Point(12, 250);
             this.isAtamaGroupbox.Name = "isAtamaGroupbox";
             this.isAtamaGroupbox.Size = new System.Drawing.Size(290, 134);
             this.isAtamaGroupbox.TabIndex = 3;
@@ -164,7 +164,7 @@
             this.ucretlendirme.Controls.Add(this.ucret);
             this.ucretlendirme.Controls.Add(this.ucretKontrol);
             this.ucretlendirme.Controls.Add(this.personelCb);
-            this.ucretlendirme.Location = new System.Drawing.Point(390, 250);
+            this.ucretlendirme.Location = new System.Drawing.Point(342, 250);
             this.ucretlendirme.Name = "ucretlendirme";
             this.ucretlendirme.Size = new System.Drawing.Size(240, 134);
             this.ucretlendirme.TabIndex = 4;
@@ -219,7 +219,7 @@
             // 
             // ucretOnayla
             // 
-            this.ucretOnayla.Location = new System.Drawing.Point(636, 22);
+            this.ucretOnayla.Location = new System.Drawing.Point(695, 247);
             this.ucretOnayla.Name = "ucretOnayla";
             this.ucretOnayla.Size = new System.Drawing.Size(89, 62);
             this.ucretOnayla.TabIndex = 5;
@@ -229,11 +229,11 @@
             // 
             // teslimEt
             // 
-            this.teslimEt.Location = new System.Drawing.Point(636, 91);
+            this.teslimEt.Location = new System.Drawing.Point(807, 247);
             this.teslimEt.Name = "teslimEt";
-            this.teslimEt.Size = new System.Drawing.Size(89, 72);
+            this.teslimEt.Size = new System.Drawing.Size(89, 62);
             this.teslimEt.TabIndex = 6;
-            this.teslimEt.Text = "TESLİM ET";
+            this.teslimEt.Text = "SEÇİLİ İŞİ TESLİM ET";
             this.teslimEt.UseVisualStyleBackColor = true;
             this.teslimEt.Click += new System.EventHandler(this.teslimEt_Click);
             // 
@@ -241,7 +241,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 416);
+            this.ClientSize = new System.Drawing.Size(908, 416);
             this.Controls.Add(this.teslimEt);
             this.Controls.Add(this.ucretOnayla);
             this.Controls.Add(this.ucretlendirme);

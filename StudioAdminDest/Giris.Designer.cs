@@ -34,19 +34,21 @@
             this.sifreLabel = new System.Windows.Forms.Label();
             this.kulLabel = new System.Windows.Forms.Label();
             this.kullaniciAdi = new System.Windows.Forms.TextBox();
+            this.sifremiUnuttumLinkLabel = new System.Windows.Forms.LinkLabel();
             this.girisGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // girisGroupBox
             // 
+            this.girisGroupBox.Controls.Add(this.sifremiUnuttumLinkLabel);
             this.girisGroupBox.Controls.Add(this.girisYapButton);
             this.girisGroupBox.Controls.Add(this.passwordText);
             this.girisGroupBox.Controls.Add(this.sifreLabel);
             this.girisGroupBox.Controls.Add(this.kulLabel);
             this.girisGroupBox.Controls.Add(this.kullaniciAdi);
-            this.girisGroupBox.Location = new System.Drawing.Point(37, 28);
+            this.girisGroupBox.Location = new System.Drawing.Point(21, 23);
             this.girisGroupBox.Name = "girisGroupBox";
-            this.girisGroupBox.Size = new System.Drawing.Size(258, 137);
+            this.girisGroupBox.Size = new System.Drawing.Size(302, 137);
             this.girisGroupBox.TabIndex = 0;
             this.girisGroupBox.TabStop = false;
             this.girisGroupBox.Text = "Giriş Yap";
@@ -96,12 +98,15 @@
             this.kullaniciAdi.Size = new System.Drawing.Size(100, 20);
             this.kullaniciAdi.TabIndex = 0;
             // 
+            // sifremiUnuttumLinkLabel
+            // 
+            // 
             // Giris
             // 
             this.AcceptButton = this.girisYapButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 199);
+            this.ClientSize = new System.Drawing.Size(351, 199);
             this.Controls.Add(this.girisGroupBox);
             this.Name = "Giris";
             this.Text = "Giris";
@@ -120,5 +125,6 @@
         private System.Windows.Forms.Label sifreLabel;
         private System.Windows.Forms.Label kulLabel;
         private System.Windows.Forms.TextBox kullaniciAdi;
+        private System.Windows.Forms.LinkLabel sifremiUnuttumLinkLabel;
     }
 }
