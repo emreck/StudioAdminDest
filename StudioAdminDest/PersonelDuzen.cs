@@ -79,5 +79,25 @@ namespace StudioAdminDest
             kangrubu.Text = kangrubuu.ToString();
             cekimkazanc.Text = cekimkazanci.ToString();
         }
+
+        private void adiSoyadi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void telnumara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);//sayısal
+        }
+
+        private void yakintelnum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);//sayısal
+        }
+
+        private void cekimkazanc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);//sayısal
+        }
     }
 }

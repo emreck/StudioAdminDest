@@ -96,6 +96,7 @@ namespace StudioAdminDest
                 ekle.ExecuteNonQuery();
                 baglanti.Close();
                 MessageBox.Show("Kayıt Başarılı !");
+                errorProvider1.Clear();
                 DialogResult uyari = MessageBox.Show("Kaydedilen Baskıyı Görüntülemek istermisiniz ?", "Uyarı !", MessageBoxButtons.YesNo);
                 if (uyari == DialogResult.Yes)
                 {
@@ -108,6 +109,36 @@ namespace StudioAdminDest
                     this.Close();
                 }
             }
+        }
+
+        private void karton_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void plastik_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void luks_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void ucretsiz_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void toplam_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void ucret_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

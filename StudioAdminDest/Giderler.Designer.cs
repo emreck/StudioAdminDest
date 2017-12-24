@@ -53,8 +53,8 @@
             this.aramaText = new System.Windows.Forms.TextBox();
             this.Arama = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -63,6 +63,7 @@
             // 
             // giderTip
             // 
+            this.giderTip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.giderTip.FormattingEnabled = true;
             this.giderTip.Items.AddRange(new object[] {
             "Fotoğraf Ekipman Gideri",
@@ -90,6 +91,7 @@
             this.giderAdi.Name = "giderAdi";
             this.giderAdi.Size = new System.Drawing.Size(121, 20);
             this.giderAdi.TabIndex = 3;
+            this.giderAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.giderAdi_KeyPress);
             // 
             // giderTutar
             // 
@@ -97,6 +99,7 @@
             this.giderTutar.Name = "giderTutar";
             this.giderTutar.Size = new System.Drawing.Size(121, 20);
             this.giderTutar.TabIndex = 4;
+            this.giderTutar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.giderTutar_KeyPress);
             // 
             // label2
             // 
@@ -187,14 +190,14 @@
             // düzenleToolStripMenuItem
             // 
             this.düzenleToolStripMenuItem.Name = "düzenleToolStripMenuItem";
-            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.düzenleToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.düzenleToolStripMenuItem.Text = "Düzenle";
             this.düzenleToolStripMenuItem.Click += new System.EventHandler(this.düzenleToolStripMenuItem_Click);
             // 
             // yenileToolStripMenuItem
             // 
             this.yenileToolStripMenuItem.Name = "yenileToolStripMenuItem";
-            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.yenileToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.yenileToolStripMenuItem.Text = "Yenile";
             this.yenileToolStripMenuItem.Click += new System.EventHandler(this.yenileToolStripMenuItem_Click);
             // 
@@ -243,6 +246,7 @@
             this.aramaText.Name = "aramaText";
             this.aramaText.Size = new System.Drawing.Size(103, 20);
             this.aramaText.TabIndex = 11;
+            this.aramaText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aramaText_KeyPress);
             // 
             // Arama
             // 
@@ -266,15 +270,6 @@
             this.panel2.Size = new System.Drawing.Size(542, 28);
             this.panel2.TabIndex = 13;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(222, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Giderlerin Toplam Tutarı :";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -283,6 +278,15 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 14;
             this.label6.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(222, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Giderlerin Toplam Tutarı :";
             // 
             // Giderler
             // 

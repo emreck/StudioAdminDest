@@ -144,6 +144,7 @@
             this.telnumara.Name = "telnumara";
             this.telnumara.Size = new System.Drawing.Size(100, 20);
             this.telnumara.TabIndex = 10;
+            this.telnumara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telnumara_KeyPress);
             // 
             // yakintelnum
             // 
@@ -151,6 +152,7 @@
             this.yakintelnum.Name = "yakintelnum";
             this.yakintelnum.Size = new System.Drawing.Size(100, 20);
             this.yakintelnum.TabIndex = 11;
+            this.yakintelnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yakintelnum_KeyPress);
             // 
             // adres
             // 
@@ -172,6 +174,7 @@
             this.cekimkazanc.Name = "cekimkazanc";
             this.cekimkazanc.Size = new System.Drawing.Size(100, 20);
             this.cekimkazanc.TabIndex = 14;
+            this.cekimkazanc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cekimkazanc_KeyPress);
             // 
             // adiSoyadi
             // 
@@ -179,6 +182,7 @@
             this.adiSoyadi.Name = "adiSoyadi";
             this.adiSoyadi.Size = new System.Drawing.Size(100, 20);
             this.adiSoyadi.TabIndex = 15;
+            this.adiSoyadi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.adiSoyadi_KeyPress);
             // 
             // button1
             // 

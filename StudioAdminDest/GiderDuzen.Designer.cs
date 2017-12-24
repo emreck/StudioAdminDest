@@ -57,6 +57,7 @@
             // 
             // personel
             // 
+            this.personel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.personel.FormattingEnabled = true;
             this.personel.Location = new System.Drawing.Point(98, 24);
             this.personel.Name = "personel";
@@ -65,6 +66,7 @@
             // 
             // giderTip
             // 
+            this.giderTip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.giderTip.FormattingEnabled = true;
             this.giderTip.Items.AddRange(new object[] {
             "Fotoğraf Ekipman Gideri",
@@ -83,6 +85,7 @@
             this.giderAdi.Name = "giderAdi";
             this.giderAdi.Size = new System.Drawing.Size(121, 20);
             this.giderAdi.TabIndex = 11;
+            this.giderAdi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.giderAdi_KeyPress);
             // 
             // GiderTutar
             // 
@@ -90,6 +93,7 @@
             this.GiderTutar.Name = "GiderTutar";
             this.GiderTutar.Size = new System.Drawing.Size(121, 20);
             this.GiderTutar.TabIndex = 12;
+            this.GiderTutar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GiderTutar_KeyPress);
             // 
             // label1
             // 

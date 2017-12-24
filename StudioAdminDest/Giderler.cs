@@ -113,6 +113,7 @@ namespace StudioAdminDest
                 giderGoster();
                 MessageBox.Show("Gider verileri kayıt edilmiştir.");
                 listele.ClearSelected();
+                toplamucret();
                 giderTip.Text = string.Empty;
                 giderTutar.Text = string.Empty;
                 giderAdi.Text = string.Empty;
@@ -141,7 +142,7 @@ namespace StudioAdminDest
                         baglanti.Close();
                         MessageBox.Show("Baskı Kaydı Başarıyla Silinmiştir.");
                         giderGoster();
-
+                        toplamucret();
 
                     }
                 }
@@ -221,6 +222,22 @@ namespace StudioAdminDest
                 toplamucret();
 
             }
+        }
+
+        private void giderAdi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar);
+         
+        }
+
+        private void giderTutar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);//sayısal
+        }
+
+        private void aramaText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsSeparator(e.KeyChar);
         }
     }
 }

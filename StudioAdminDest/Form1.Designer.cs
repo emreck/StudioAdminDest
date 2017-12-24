@@ -118,21 +118,21 @@
             // isOlusturToolStripMenuItem
             // 
             this.isOlusturToolStripMenuItem.Name = "isOlusturToolStripMenuItem";
-            this.isOlusturToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.isOlusturToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.isOlusturToolStripMenuItem.Text = "İş oluştur";
             this.isOlusturToolStripMenuItem.Click += new System.EventHandler(this.isOlusturToolStripMenuItem_Click);
             // 
             // yapilacakIslerToolStripMenuItem
             // 
             this.yapilacakIslerToolStripMenuItem.Name = "yapilacakIslerToolStripMenuItem";
-            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.yapilacakIslerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.yapilacakIslerToolStripMenuItem.Text = "Yapılacak İşler";
             this.yapilacakIslerToolStripMenuItem.Click += new System.EventHandler(this.yapilacakIslerToolStripMenuItem_Click);
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bToolStripMenuItem.Text = "Biten İşler";
             this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
             // 
@@ -186,13 +186,14 @@
             // işAnaliziToolStripMenuItem
             // 
             this.işAnaliziToolStripMenuItem.Name = "işAnaliziToolStripMenuItem";
-            this.işAnaliziToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.işAnaliziToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.işAnaliziToolStripMenuItem.Text = "İs Analizi";
+            this.işAnaliziToolStripMenuItem.Click += new System.EventHandler(this.işAnaliziToolStripMenuItem_Click);
             // 
             // odemeToolStripMenuItem
             // 
             this.odemeToolStripMenuItem.Name = "odemeToolStripMenuItem";
-            this.odemeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.odemeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.odemeToolStripMenuItem.Text = "Ödeme";
             this.odemeToolStripMenuItem.Click += new System.EventHandler(this.odemeToolStripMenuItem_Click);
             // 

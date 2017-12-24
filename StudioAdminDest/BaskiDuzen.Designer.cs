@@ -63,6 +63,7 @@
             this.ucret.Name = "ucret";
             this.ucret.Size = new System.Drawing.Size(121, 20);
             this.ucret.TabIndex = 34;
+            this.ucret.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ucret_KeyPress);
             // 
             // label8
             // 
@@ -75,6 +76,7 @@
             // 
             // Personel
             // 
+            this.Personel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Personel.FormattingEnabled = true;
             this.Personel.Location = new System.Drawing.Point(137, 56);
             this.Personel.Name = "Personel";
@@ -83,6 +85,7 @@
             // 
             // musteri
             // 
+            this.musteri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.musteri.FormattingEnabled = true;
             this.musteri.Location = new System.Drawing.Point(137, 26);
             this.musteri.Name = "musteri";
@@ -95,6 +98,7 @@
             this.toplam.Name = "toplam";
             this.toplam.Size = new System.Drawing.Size(121, 20);
             this.toplam.TabIndex = 30;
+            this.toplam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.toplam_KeyPress);
             // 
             // ucretsiz
             // 
@@ -102,6 +106,7 @@
             this.ucretsiz.Name = "ucretsiz";
             this.ucretsiz.Size = new System.Drawing.Size(121, 20);
             this.ucretsiz.TabIndex = 29;
+            this.ucretsiz.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ucretsiz_KeyPress);
             // 
             // luks
             // 
@@ -109,6 +114,7 @@
             this.luks.Name = "luks";
             this.luks.Size = new System.Drawing.Size(121, 20);
             this.luks.TabIndex = 28;
+            this.luks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.luks_KeyPress);
             // 
             // plastik
             // 
@@ -116,6 +122,7 @@
             this.plastik.Name = "plastik";
             this.plastik.Size = new System.Drawing.Size(121, 20);
             this.plastik.TabIndex = 27;
+            this.plastik.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.plastik_KeyPress);
             // 
             // karton
             // 
@@ -123,6 +130,7 @@
             this.karton.Name = "karton";
             this.karton.Size = new System.Drawing.Size(121, 20);
             this.karton.TabIndex = 26;
+            this.karton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.karton_KeyPress);
             // 
             // label7
             // 
