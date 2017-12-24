@@ -66,7 +66,7 @@ namespace StudioAdminDest
 
             try
             {
-                MySqlCommand persList = new MySqlCommand("select  ID,AdSoyad,TelNo,TopKazanc,CekimBasiKazanc,Alacaklari from Kullanicilar", baglanti);
+                MySqlCommand persList = new MySqlCommand("select  ID,AdSoyad,TelNo,TopKazanc,CekimBasiKazanc,Alacaklari from Kullanicilar where AjansNo='"+Form1.ajansID+"' ", baglanti);
                 MySqlDataReader persOku = persList.ExecuteReader();
 
                 if (persOku.HasRows)

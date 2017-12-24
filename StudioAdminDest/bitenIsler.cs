@@ -35,7 +35,7 @@ namespace StudioAdminDest
             SqlBaglanti con = new SqlBaglanti();
             MySqlConnection baglanti = con.baglanti();
 
-            MySqlCommand bitenBul = new MySqlCommand("select ID,AdSoyad,TelNo,TeslimTarihi,teslimDurumu,Tarih,Saat,Referans,CekimYeri,IsiYapanlar,Fiyat,UcretDurumu from Isler where teslimDurumu='Teslim Edildi'  ", baglanti);
+            MySqlCommand bitenBul = new MySqlCommand("select ID,AdSoyad,TelNo,TeslimTarihi,teslimDurumu,Tarih,Saat,Referans,CekimYeri,IsiYapanlar,Fiyat,UcretDurumu from Isler where teslimDurumu='Teslim Edildi' and ajansID='"+Form1.ajansID+"' ", baglanti);
             MySqlDataReader bitenAra = bitenBul.ExecuteReader();
 
             if (bitenAra.HasRows)
